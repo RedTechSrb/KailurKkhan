@@ -177,7 +177,7 @@
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     color: white;
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 0.9375em;
     font-weight: 700;
     letter-spacing: 0.25em;
@@ -205,7 +205,7 @@
 
 .heading h1{
     color: white;
-    font-family: 'Playfair Display';
+    font-family: 'Overpass';
     font-size: 3.75em;
     font-weight: 700;
     margin: 0;
@@ -218,7 +218,7 @@
 
 .text p{
     color: white;
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 1.125em;
     font-weight: 300;
 }
@@ -237,7 +237,7 @@
     width: 100%;
     height: 100%;
 
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 0.8125em;
     font-weight: bold;
     letter-spacing: 0.3em;

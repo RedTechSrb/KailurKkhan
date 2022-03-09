@@ -144,7 +144,7 @@ body{
 }
 
 .heading h1{
-    font-family: 'Playfair Display';
+    font-family: 'Overpass';
     font-size: 3.875em;
     font-weight: 700;
     color:#ffffff;
@@ -158,7 +158,7 @@ body{
 }
 
 .text p{
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 0.9375em;
     font-weight: 300;
     color:#ffffff;
@@ -179,7 +179,7 @@ body{
     width: 100%;
     height: 100%;
 
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 0.8125em;
     font-weight: bold;
     letter-spacing: 0.3em;
@@ -256,7 +256,7 @@ body{
 .content nav{
     position: relative;
     width: 30%;
-    height: 280px;
+    height: 90px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -289,63 +289,21 @@ body{
 }
 
 .yachting .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), color-stop(10%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, white 10%, rgba(255, 255, 255, 0.25) 10%);
-    background: linear-gradient(to bottom, white 10%, rgba(255, 255, 255, 0.25) 10%) /* TODO 25 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(33%, white), color-stop(33%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, white 33%, rgba(255, 255, 255, 0.25) 33%);
+    background: linear-gradient(to bottom, white 33%, rgba(255, 255, 255, 0.25) 33%) /* TODO 25 */
 }
 
 .travel .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(255, 255, 255, 0.25)), color-stop(10%, white), color-stop(20%, white), color-stop(20%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 10%, white 10%, white 20%, rgba(255, 255, 255, 0.25) 20%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 10%, white 10%, white 20%, rgba(255, 255, 255, 0.25) 20%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(33%, rgba(255, 255, 255, 0.25)), color-stop(33%, white), color-stop(67%, white), color-stop(67%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 33%, white 33%, white 67%, rgba(255, 255, 255, 0.25) 67%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 33%, white 33%, white 67%, rgba(255, 255, 255, 0.25) 67%);
 }
 
 .entertainment .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.25)), color-stop(20%, white), color-stop(30%, white), color-stop(30%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 20%, white 20%, white 30%, rgba(255, 255, 255, 0.25) 30%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 20%, white 20%, white 30%, rgba(255, 255, 255, 0.25) 30%);
-}
-
-.sports .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(255, 255, 255, 0.25)), color-stop(30%, white), color-stop(40%, white), color-stop(40%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 30%, white 30%, white 40%, rgba(255, 255, 255, 0.25) 40%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 30%, white 30%, white 40%, rgba(255, 255, 255, 0.25) 40%);
-}
-
-.transport .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(255, 255, 255, 0.25)), color-stop(40%, white), color-stop(50%, white), color-stop(50%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 40%, white 40%, white 50%, rgba(255, 255, 255, 0.25) 50%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 40%, white 40%, white 50%, rgba(255, 255, 255, 0.25) 50%);
-}
-
-.celebrations .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, white), color-stop(60%, white), color-stop(60%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 50%, white 50%, white 60%, rgba(255, 255, 255, 0.25) 60%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 50%, white 50%, white 60%, rgba(255, 255, 255, 0.25) 60%);
-}
-
-.luxury_items .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0.25)), color-stop(60%, white), color-stop(70%, white), color-stop(70%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 60%, white 60%, white 70%, rgba(255, 255, 255, 0.25) 70%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 60%, white 60%, white 70%, rgba(255, 255, 255, 0.25) 70%);
-}
-
-.wellness .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(255, 255, 255, 0.25)), color-stop(70%, white), color-stop(80%, white), color-stop(80%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 70%, white 70%, white 80%, rgba(255, 255, 255, 0.25) 80%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 70%, white 70%, white 80%, rgba(255, 255, 255, 0.25) 80%);
-}
-
-.events .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, rgba(255, 255, 255, 0.25)), color-stop(80%, white), color-stop(90%, white), color-stop(90%, rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 80%, white 80%, white 90%, rgba(255, 255, 255, 0.25) 90%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 80%, white 80%, white 90%, rgba(255, 255, 255, 0.25) 90%);
-}
-
-.networking .select_indicator{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(255, 255, 255, 0.25)), color-stop(90%, white), color-stop(100%, white), to(rgba(255, 255, 255, 0.25)));
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 90%, white 90%, white 100%, rgba(255, 255, 255, 0.25) 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 90%, white 90%, white 100%, rgba(255, 255, 255, 0.25) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(67%, rgba(255, 255, 255, 0.25)), color-stop(67%, white), color-stop(100%, white), color-stop(100%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 67%, white 67%, white 100%, rgba(255, 255, 255, 0.25) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 67%, white 67%, white 100%, rgba(255, 255, 255, 0.25) 100%);
 }
 
 .nav_items{
@@ -370,7 +328,7 @@ body{
 
 .nav_item{
     width: 100%;
-    height: 10%;
+    height: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -396,7 +354,7 @@ body{
 }
 
 .nav_item span{
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 0.875em;
     font-weight: 400;
     color: #ffffff;
@@ -433,15 +391,15 @@ body{
 
 /* trebalo bi da je okej ostaviti otkomentarisano: */
 .yachting .bg{
-    background-image: url("../content/backgrounds/index/yachting_bg.jpg");
+    background-image: url("../content/backgrounds/index/HOME(DESKTOP).jpg");
 }
 
 .travel .bg{
-    background-image: url("../content/backgrounds/index/travel_bg.jpg");
+    background-image: url("../content/backgrounds/index/As Seen On(DESKTOP).png");
 }
 
 .entertainment .bg{
-    background-image: url("../content/backgrounds/index/entertainment_bg.jpg");
+    background-image: url("../content/backgrounds/index/REFERENCES (DESKTOP).png");
 }
 
 .sports .bg{
@@ -532,7 +490,7 @@ body{
     .content nav{
         position: absolute;
         bottom: 25px;
-        height: 220px;
+        height: 70px;
         bottom: 5.2%;
     }
 
@@ -674,7 +632,7 @@ body{
         top: unset;
         bottom: unset;
         bottom: 25px;
-        height: 190px;
+        height: 60px;
     }
 
     .select_indicator{

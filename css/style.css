@@ -199,7 +199,7 @@ body{
 
 .loading{
     color: white;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Overpass", sans-serif;
     font-size: 1.75em;
     font-weight: 600;
     text-align: center;
@@ -235,7 +235,7 @@ body{
 }
 
 .menu_items a{
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 1.6875em;
     font-weight: 600;
     text-decoration: none;

@@ -72,14 +72,14 @@
 
 .text p{
     color: white;
-    font-family: Oswald;
+    font-family: Poppins;
     font-size: 1.3125em;
     font-weight: 300;
     margin: 0;
 }
 
 .text p span{
-    font-family: "Playfair Display";
+    font-family: "Overpass";
     font-size: 1.75em;
     font-weight: 400;
     white-space: nowrap;

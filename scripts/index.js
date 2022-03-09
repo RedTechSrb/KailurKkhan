@@ -30,7 +30,7 @@ const animationList = [
 ];
 
 function loadImages() {
-    $('<img/>').attr('src', '../content/backgrounds/index/yachting_bg.jpg').on('load', function() {
+    $('<img/>').attr('src', '../content/backgrounds/index/HOME(DESKTOP).jpg').on('load', function() {
         $(this).remove();
         /* $('.yachting .bg').css('background-image', 'url(../content/backgrounds/index/yachting_bg.jpg)'); */
         loadedCount++;

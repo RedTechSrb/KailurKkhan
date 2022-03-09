@@ -136,7 +136,7 @@
 .basic_info{
     width: 122px;
     color: white;
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -193,7 +193,7 @@
 }
 
 .heading h1{
-    font-family: 'Playfair Display';
+    font-family: 'Overpass';
     font-weight: 600;
     font-size: 3.375em;
     color: white;
@@ -206,7 +206,7 @@
 }
 
 .text p{
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-weight: 300;
     font-size: 1.125em;
     color: white;
@@ -226,7 +226,7 @@
     width: 100%;
     height: 100%;
 
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 0.8125em;
     letter-spacing: 0.3em;
     font-weight: bold;
@@ -294,7 +294,7 @@
 }
 
 .next_label{
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 1.94em;
     font-weight: 700;
     color: white;
