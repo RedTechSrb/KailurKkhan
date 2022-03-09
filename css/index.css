@@ -1,0 +1,735 @@
+html{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    overflow-x: visible;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+.section{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: -webkit-transform 1s ease-in;
+    transition: -webkit-transform 1s ease-in;
+    -o-transition: transform 1s ease-in;
+    transition: transform 1s ease-in;
+    transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.yachting .bg{
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+
+.vignette{
+    visibility: hidden;
+    width: 100%;
+    height: 25%;
+}
+
+.v_top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0,0,0,1)), color-stop(40%, rgba(0,0,0,0.9)), to(rgba(0,0,0,0)));
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 40%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
+}
+
+.v_bot{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), color-stop(45%, rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
+    background: -o-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
+}
+
+.header{
+    z-index: 10;
+}
+
+.fp-tableCell{
+    width: 100%;
+    position: relative;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.content{
+    width: 92%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    align-items: center;
+}
+
+.main{
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin-top: -50px;
+}
+
+.heading{
+    margin-bottom: 4vh;
+    white-space: nowrap;
+}
+
+.heading h1{
+    font-family: 'Playfair Display';
+    font-size: 3.875em;
+    font-weight: 700;
+    color:#ffffff;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text{
+    width: 711px;
+}
+
+.text p{
+    font-family: 'Oswald';
+    font-size: 0.9375em;
+    font-weight: 300;
+    color:#ffffff;
+    position: relative;
+}
+
+.main_btn{
+    width: 230px;
+    height: 53px;
+    margin-top: 35px;
+    text-decoration: none;
+}
+
+  
+.main_btn button{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Oswald';
+    font-size: 0.8125em;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+
+    color: white;
+    border: 2px solid white;
+    background: none;
+
+    overflow: hidden;
+    outline: 0;
+
+    z-index: 1;
+    cursor: pointer;
+
+    -webkit-transition: 0.08s ease-in;
+
+    -o-transition: 0.08s ease-in;
+
+    transition: 0.08s ease-in;
+}
+  
+.main_btn button:hover{
+    color: black;
+}
+  
+.main_btn button:before{
+    width: 230px;
+    height: 53px;
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: -3px;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -o-transition: top 0.15s ease-in;
+    transition: top 0.15s ease-in;
+    -webkit-transition: top 0.15s ease-in;
+}
+  
+.main_btn button:hover:before{
+    top: 0;
+}
+
+.contact{
+    width: 30%;
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+            align-items: flex-end;
+}
+
+.contact a{
+    width: 20px;
+    height: 20px;
+}
+
+.contact a img{
+    width: 100%;
+    height: 100%;
+}
+
+.content nav{
+    position: relative;
+    width: 30%;
+    height: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: nowrap;
+}
+
+.select_indicator{
+    width: 6px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+}
+
+.yachting .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), color-stop(10%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, white 10%, rgba(255, 255, 255, 0.25) 10%);
+    background: linear-gradient(to bottom, white 10%, rgba(255, 255, 255, 0.25) 10%) /* TODO 25 */
+}
+
+.travel .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(255, 255, 255, 0.25)), color-stop(10%, white), color-stop(20%, white), color-stop(20%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 10%, white 10%, white 20%, rgba(255, 255, 255, 0.25) 20%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 10%, white 10%, white 20%, rgba(255, 255, 255, 0.25) 20%);
+}
+
+.entertainment .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.25)), color-stop(20%, white), color-stop(30%, white), color-stop(30%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 20%, white 20%, white 30%, rgba(255, 255, 255, 0.25) 30%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 20%, white 20%, white 30%, rgba(255, 255, 255, 0.25) 30%);
+}
+
+.sports .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(255, 255, 255, 0.25)), color-stop(30%, white), color-stop(40%, white), color-stop(40%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 30%, white 30%, white 40%, rgba(255, 255, 255, 0.25) 40%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 30%, white 30%, white 40%, rgba(255, 255, 255, 0.25) 40%);
+}
+
+.transport .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(255, 255, 255, 0.25)), color-stop(40%, white), color-stop(50%, white), color-stop(50%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 40%, white 40%, white 50%, rgba(255, 255, 255, 0.25) 50%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 40%, white 40%, white 50%, rgba(255, 255, 255, 0.25) 50%);
+}
+
+.celebrations .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, white), color-stop(60%, white), color-stop(60%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 50%, white 50%, white 60%, rgba(255, 255, 255, 0.25) 60%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 50%, white 50%, white 60%, rgba(255, 255, 255, 0.25) 60%);
+}
+
+.luxury_items .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0.25)), color-stop(60%, white), color-stop(70%, white), color-stop(70%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 60%, white 60%, white 70%, rgba(255, 255, 255, 0.25) 70%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 60%, white 60%, white 70%, rgba(255, 255, 255, 0.25) 70%);
+}
+
+.wellness .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(255, 255, 255, 0.25)), color-stop(70%, white), color-stop(80%, white), color-stop(80%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 70%, white 70%, white 80%, rgba(255, 255, 255, 0.25) 80%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 70%, white 70%, white 80%, rgba(255, 255, 255, 0.25) 80%);
+}
+
+.events .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, rgba(255, 255, 255, 0.25)), color-stop(80%, white), color-stop(90%, white), color-stop(90%, rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 80%, white 80%, white 90%, rgba(255, 255, 255, 0.25) 90%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 80%, white 80%, white 90%, rgba(255, 255, 255, 0.25) 90%);
+}
+
+.networking .select_indicator{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(255, 255, 255, 0.25)), color-stop(90%, white), color-stop(100%, white), to(rgba(255, 255, 255, 0.25)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.25) 90%, white 90%, white 100%, rgba(255, 255, 255, 0.25) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 90%, white 90%, white 100%, rgba(255, 255, 255, 0.25) 100%);
+}
+
+.nav_items{
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    left: 4%;
+}
+
+.nav_item{
+    width: 100%;
+    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.nav_item span{
+    opacity: 0.25;
+}
+
+.nav_item span:hover{
+    opacity: 0.75;
+}
+
+.nav_item.current span{
+    opacity: 1;
+}
+
+.nav_item span{
+    font-family: 'Oswald';
+    font-size: 0.875em;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.scroll_gesture{
+    width: 3px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.5px;
+    top: 95%;
+    overflow: hidden;
+}
+
+.yachting .scroll_gesture{
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+}
+
+.scroll_gesture::before{
+    content: '';
+    width: 3px;
+    height: 35px;
+    background-color: white;
+    position: absolute;
+    -webkit-animation: scroll-gesture 2s infinite;
+            animation: scroll-gesture 2s infinite;
+}
+
+/* trebalo bi da je okej ostaviti otkomentarisano: */
+.yachting .bg{
+    background-image: url("../content/backgrounds/index/yachting_bg.jpg");
+}
+
+.travel .bg{
+    background-image: url("../content/backgrounds/index/travel_bg.jpg");
+}
+
+.entertainment .bg{
+    background-image: url("../content/backgrounds/index/entertainment_bg.jpg");
+}
+
+.sports .bg{
+    background-image: url("../content/backgrounds/index/sports_bg.jpg");
+}
+
+.transport .bg{ 
+    background-image: url("../content/backgrounds/index/transport_bg.jpg");
+}
+
+.celebrations .bg{
+    background-image: url("../content/backgrounds/index/celebrations_bg.jpg");
+}
+
+.luxury_items .bg{
+    background-image: url("../content/backgrounds/index/luxury_items_bg.jpg");;
+}
+
+.wellness .bg{
+    background-image: url("../content/backgrounds/index/wellness_bg.jpg");
+}
+
+.events .bg{
+    background-image: url("../content/backgrounds/index/events_bg.jpg");
+}
+
+.networking .bg{
+    background-image: url("../content/backgrounds/index/networking_bg.jpg");
+}
+
+@media (pointer:coarse) {
+    .main_btn button{
+        color: black;
+        background: white;
+    }
+
+    .main_btn button::before{
+        display: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    .main{
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .heading{
+        white-space: normal;
+    }
+}
+
+@media (max-width: 1300px) {
+    .text{
+        width: 600px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .text{
+        width: 500px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .text{
+        width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main{
+        margin-top: 0;
+    }
+
+    .text{
+        width: 600px;
+    }
+
+    .content{
+        display: block;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .content nav{
+        position: absolute;
+        bottom: 25px;
+        height: 220px;
+        bottom: 5.2%;
+    }
+
+    .select_indicator{
+        width: 3px;
+    }
+
+    .nav_item{
+        opacity: 1;
+    }
+
+    .nav_item span{
+        font-size: 0.8125em;
+        font-weight: 300;
+    }
+
+    .main{
+        width: 100%;
+        position: absolute;
+        top: 5%;
+    }
+
+    .text{
+        width: 85%;
+    }
+
+    .contact{
+        display: none;
+    }
+
+    .scroll_gesture{
+        left: unset;
+        margin-left: unset;
+        right: 4%;
+        top: unset;
+        bottom: 5.25%;
+    }
+
+    .slide-nav-out-scroll{
+        -webkit-animation: slide-out-top-200 1s ease-out backwards !important;
+                animation: slide-out-top-200 1s ease-out backwards !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .heading h1{
+        font-size: 3.25em;
+    }
+
+    .text p{
+        font-size: 0.8125em;
+    }
+
+    .main_btn{
+        width: 184px;
+        height: 42.4px;
+    }
+
+    .main_btn button{
+        letter-spacing: 1px;
+        font-size: 0.625em;
+    }
+}
+
+@media (max-width: 600px) {
+    .heading h1{
+        font-size: 2.625em;
+    }
+
+    .text p{
+        font-size: 0.6875em;
+    }
+
+    .main_btn{
+        width: 200px;
+        height: 34px;
+    }
+
+    .btn_discover{
+        font-size: 0.625em;
+    }
+
+    .content nav{
+        bottom: 3%;
+    }
+
+    .scroll_gesture{
+        bottom: 3%;
+    }
+}   
+
+@media (max-width: 425px) {
+    .vignette{
+        visibility: visible;
+    }
+
+    .yachting .bg{
+        background-position: 50% 0%;
+    }
+
+    .travel .bg{
+        background-position: 15% 0%;
+    }
+
+    .entertainment .bg{
+        background-position: 35% 0%;
+    }
+
+    .sports .bg{
+        background-position: 63% 0%;
+    }
+
+    .transport .bg{
+        background-position: 50% 0%;
+    }
+
+    .celebrations .bg{
+        background-position: 50% 0%;
+    }
+
+    .luxury_items .bg{
+        background-position: 40% 0%;
+    }
+    
+    .wellness .bg{
+        background-position: 50% 0%;
+    }
+
+    .events .bg{
+        background-position: 50% 0%;
+    }
+
+    .networking .bg{
+        background-position: 51% 0%;
+    }
+
+    .content nav{
+        position: absolute;
+        top: unset;
+        bottom: unset;
+        bottom: 25px;
+        height: 190px;
+    }
+
+    .select_indicator{
+        width: 4px;
+    }
+
+    .nav_item span{
+        font-size: 0.6875em;
+        font-weight: 300;
+    }
+    
+}
+
+@media (max-width: 425px) and (max-height: 650px) {
+    .main{
+        top: 3%;
+    }
+
+    .heading{
+        margin-bottom: 10px;
+    }
+
+    .heading h1{
+        font-size: 2.25em;
+    }
+
+    .main_btn{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 425px) and (max-height: 550px) {
+    .main{
+        top: -10%;
+    }
+}
+
+@media (max-width: 425px) and (min-height: 550px) {
+    .main{
+        top: -5%;
+    }
+}
+
+@media (max-width: 425px) and (min-height: 600px) {
+    .main{
+        top: 5%;
+    }
+}
+
+@media (max-width: 300px) {
+    .main{
+        top: -1%;
+    }
+
+    .heading h1{
+        font-size: 2.25em;
+    }
+}

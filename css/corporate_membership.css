@@ -1,0 +1,392 @@
+@font-face {
+    font-family: "Autograf";
+    src: url("../resources/fonts/Autograf_PersonalUseOnly.ttf");
+}
+
+
+.header{
+    z-index: 10;
+}
+
+.content{
+    max-width: 100%;
+    min-height: 90vh;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.main{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.logo_{
+    margin-right: 3.65%;
+    width: 348.5px;
+    height: 339.7px;
+    -webkit-animation: slide-in-bot-100vh 1.5s;
+            animation: slide-in-bot-100vh 1.5s;
+}
+
+.member_cards{
+    width: 691px;
+    height: 548px;
+    -webkit-animation: slide-in-bot-100vh 1.5s;
+            animation: slide-in-bot-100vh 1.5s;
+}
+
+.text{
+    width: 44.27%;
+    margin-left: 3.65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.text p{
+    color: white;
+    font-family: Oswald;
+    font-size: 1.3125em;
+    font-weight: 300;
+    margin: 0;
+}
+
+.text p span{
+    font-family: "Playfair Display";
+    font-size: 1.75em;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.signature{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 55%;
+    margin-top: 50px;
+}
+
+.membership .signature{
+    margin-top: 0;
+}
+
+.signature .autograph{
+    color: white;
+    font-size: 2.1875em;
+    font-weight: 400;
+    font-family: "Autograf", sans-serif;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-bottom: 1px solid white;
+}
+
+.signature .stamp{
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(-30%, 0);
+        -ms-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+    -webkit-animation: stampAnimation 1.1s ease-in-out;
+            animation: stampAnimation 1.1s ease-in-out;
+}
+
+@media (max-width: 1700px) {
+    .text p{
+        font-size: 1.25em;
+    }
+    
+    .text p span{
+        font-size: 1.5625em;
+        white-space: normal;
+    }
+
+    .signature .autograph{
+        font-size: 1.875em;   
+    }
+    
+    .signature .stamp{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .member_cards{
+        width: 587.35px;
+        height: 465.8px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .text p{
+        font-size: 1.125em;
+    }
+
+    .logo_{
+        width: 296.225px;
+        height: 288.745px;
+    }
+
+    .signature .autograph{
+        font-size: 1.5625em;   
+    }
+    
+    .signature .stamp{
+        width: 66.4px;
+        height: 66.4px;
+    }
+}   
+
+@media (max-width: 1400px) {
+    .member_cards{
+        width: 500px;
+        height: 395.93px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .signature{
+        margin-top: 3em;
+    }
+}
+
+@media (max-width: 1050px){
+    .main{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 100px;
+    }
+
+    .main img{
+        margin-right: 0;
+        margin-bottom: 75px;
+    }
+
+    .logo_{
+        width: 209.1px;
+        height: 203.82px;
+    }
+
+    .member_cards{
+        width: 414.6px;
+        height: 328.8px;
+    }
+
+    .text{
+        width: 80%;
+        margin-left: 0;
+        line-height: 1.7em;
+        -webkit-animation: slide-in-bot-100vh 1.5s;
+                animation: slide-in-bot-100vh 1.5s;
+    }
+
+    .text p{
+        text-align: center;
+    }
+
+    .signature{
+        -ms-flex-item-align: center;
+            align-self: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 3em;
+        -webkit-animation: slide-in-bot-100vh 1.5s;
+                animation: slide-in-bot-100vh 1.5s;
+    }
+
+    .membership .signature{
+        margin-top: 3em;
+    }
+
+    .signature .autograph{
+        border: none;
+    }
+
+    .stamp{
+        display: none;
+    }
+}
+
+@media (max-width: 1050px) and (min-height: 900px) {
+    .content{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .text p{
+        font-size: 1em;
+    }
+
+    .signature .autograph{
+        font-size: 1.625em;
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper{
+        display: block;
+    }
+
+    .content{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: start;
+        height: unset;
+    }
+
+    .logo_{
+        width: 188.19px;
+        height: 183.438px;
+    }
+
+    .member_cards{
+        width: 373.14px;
+        height: 295.92px;
+    }
+
+    .text{
+        width: 80% !important;
+        -webkit-animation: slide-in-bot-100vh 1.5s;
+                animation: slide-in-bot-100vh 1.5s;
+    }
+
+    .text p{
+        text-align: center;
+        font-size: 0.875em;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo_{
+        width: 150.56px;
+        height: 146.75px;
+    }
+
+    .member_cards{
+        width: 298.512px;
+        height: 236.736px;
+    }
+
+    .text p{
+        font-size: 0.75em;
+    }
+
+    .text p span{
+        font-size: 1.25em;
+    }
+
+    .signature .autograph{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 425px) {
+    .main{
+        margin-top: 10vh;
+    }
+
+    .main img{
+        margin-bottom: 3em;
+    }
+
+    .logo_{
+        width: 75.2px;
+        height: 73.29px;
+    }
+
+    .member_cards{
+        width: 310.95px;
+        height: 246.6px;
+    }
+
+    .text{
+        width: 70% !important;
+        line-height: 1.7em;
+    }
+
+    .text p{
+        font-size: 0.625em;
+        line-height: 1.7em;
+    }
+
+    .text p span{
+        font-size: 1.25em;
+        white-space: normal;
+    }
+
+    .signature .autograph{
+        font-size: 1.3125em;
+    }
+}
+
+@media (max-width: 350px) {
+    .member_cards{
+        width: 248.76px;
+        height: 197.28px;
+    }
+}
+
+@media (max-width: 300px) {
+    .main img{
+        margin-bottom: 40px;
+    }
+
+    .member_cards{
+        width: 223.884px;
+        height: 177.552px;
+    }
+}
