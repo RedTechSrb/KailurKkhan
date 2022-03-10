@@ -361,7 +361,7 @@ function removeAnimations(element) {
 new fullpage('#fullpage', {
     //options here
     autoScrolling:true,
-    fixedElements: '.header, #overlay', /* #discover */
+    fixedElements: '.header, #overlay, .footer', /* #discover */
     scrollingSpeed: SCROLL_SPEED_SECONDS * 1000,
     loopBottom: true,
     scrollBar: false,

@@ -53,6 +53,10 @@ body{
     z-index: 10;
 }
 
+.color_white{
+    filter: invert(100%);
+}
+
 .footer{
     width: 92%;
     display: -webkit-box;

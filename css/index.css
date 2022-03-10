@@ -397,38 +397,17 @@ body{
 
 .travel .bg{
     background-image: url("../content/backgrounds/index/As Seen On(DESKTOP).png");
+    filter: blur(5px) brightness(70%);
+    -webkit-filter: blur(5px) brightness(70%);
+
 }
 
 .entertainment .bg{
     background-image: url("../content/backgrounds/index/REFERENCES (DESKTOP).png");
-}
 
-.sports .bg{
-    background-image: url("../content/backgrounds/index/sports_bg.jpg");
-}
+    filter: blur(2px) brightness(40%);
+    -webkit-filter: blur(2px) brightness(40%);
 
-.transport .bg{ 
-    background-image: url("../content/backgrounds/index/transport_bg.jpg");
-}
-
-.celebrations .bg{
-    background-image: url("../content/backgrounds/index/celebrations_bg.jpg");
-}
-
-.luxury_items .bg{
-    background-image: url("../content/backgrounds/index/luxury_items_bg.jpg");;
-}
-
-.wellness .bg{
-    background-image: url("../content/backgrounds/index/wellness_bg.jpg");
-}
-
-.events .bg{
-    background-image: url("../content/backgrounds/index/events_bg.jpg");
-}
-
-.networking .bg{
-    background-image: url("../content/backgrounds/index/networking_bg.jpg");
 }
 
 @media (pointer:coarse) {
