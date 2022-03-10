@@ -53,6 +53,27 @@ body{
     z-index: 10;
 }
 
+.footer{
+    width: 92%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 1%;
+    left: 4%;
+    margin-bottom: 35px;
+    z-index: 10000;
+}
+
 .fixed{
     position: fixed;
 }
@@ -64,6 +85,10 @@ body{
 #profile_icon{
     width: 33.5px;
     height: 33.5px;
+}
+
+#logotip{
+    height: 1.5rem;
 }
 
 #logo{

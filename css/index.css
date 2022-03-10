@@ -372,6 +372,7 @@ body{
     overflow: hidden;
 }
 
+
 .yachting .scroll_gesture{
     -webkit-transform: translateY(50px);
         -ms-transform: translateY(50px);

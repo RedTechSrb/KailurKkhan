@@ -358,7 +358,7 @@ function hideOverlay() {
 new fullpage('#fullpage', {
     //options here
     autoScrolling:true,
-    fixedElements: '.header, #overlay',
+    fixedElements: '.header, #overlay, .footer',
     scrollingSpeed: SCROLL_SPEED_SECONDS * 1000,
     loopBottom: true,
     scrollBar: false,
