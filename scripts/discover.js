@@ -107,16 +107,16 @@ function hideOverlayMenu() {
 
 // fade-in content-a posle gasenja overlay menija
 function showContent() {
-    let basic_info = document.getElementsByClassName('basic_info')[0];
+    let basic_info = document.getElementsByClassName('desc_logo')[0];
     removeAnimations(basic_info);
     basic_info.classList.add('slide-basic_info-in-overlay');
     let desc = document.getElementsByClassName('desc')[0];
     removeAnimations(desc);
     desc.classList.add('slide-line-in-overlay');
-    let line = document.getElementsByClassName('line')[0];
-    removeAnimations(line);
-    line.classList.add('slide-desc-in-overlay');
-    document.getElementsByClassName('next')[0].style.visibility = 'visible';
+    // let line = document.getElementsByClassName('line')[0];
+    // removeAnimations(line);
+    // line.classList.add('slide-desc-in-overlay');
+    // document.getElementsByClassName('next')[0].style.visibility = 'visible';
     document.getElementsByClassName('header')[0].style.visibility = 'visible';
 }
 
