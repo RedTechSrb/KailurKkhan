@@ -564,47 +564,25 @@ body{
 
 @media (max-width: 425px) {
     .vignette{
-        visibility: visible;
+        visibility: visible;  
     }
 
     .yachting .bg{
         background-position: 50% 0%;
+        background-image: url("../content/backgrounds/index/HOME(MOBILE).jpg");
     }
 
     .travel .bg{
         background-position: 15% 0%;
+        background-image: url("../content/backgrounds/index/AS SEEN ON (HOME).png");
+        filter: blur(3px) brightness(70%);
+        -webkit-filter: blur(3px) brightness(70%);
     }
 
     .entertainment .bg{
         background-position: 35% 0%;
-    }
-
-    .sports .bg{
-        background-position: 63% 0%;
-    }
-
-    .transport .bg{
-        background-position: 50% 0%;
-    }
-
-    .celebrations .bg{
-        background-position: 50% 0%;
-    }
-
-    .luxury_items .bg{
-        background-position: 40% 0%;
-    }
-    
-    .wellness .bg{
-        background-position: 50% 0%;
-    }
-
-    .events .bg{
-        background-position: 50% 0%;
-    }
-
-    .networking .bg{
-        background-position: 51% 0%;
+        background-image: url("../content/backgrounds/index/REFERENCES\ \(MOBILE\).png");
+        
     }
 
     .content nav{

@@ -190,6 +190,40 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+            /* align-items: flex-start; */
+}
+
+.footer_about{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 15%;
+    right: 8%;
+    margin-bottom: 35px;
+}
+
+.potpis{
+    padding: 0 35px;
+    border-bottom: 1px solid white;
+}
+
+.desc_logo{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: center;
+            /* align-items: flex-start; */
+    margin-top: 20px;
 }
 
 .heading h1{
@@ -201,8 +235,13 @@
     margin-bottom: 0.6em;
 }
 
+.logo_about{
+    height: 60%;
+    width: 50%;
+}
+
 .text{
-    width: 760px;
+    width: 800px;
 }
 
 .text p{
@@ -510,7 +549,7 @@
     .content{
         -webkit-box-align: start;
             -ms-flex-align: start;
-                align-items: flex-start;
+                align-items: center;
     }
 
     .main{
@@ -524,7 +563,30 @@
         height: unset;
         -webkit-box-align: start;
             -ms-flex-align: start;
-                align-items: flex-start;
+                align-items: center;
+        margin-right: 5%;
+    }
+
+    .footer_about{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        bottom: 0%;
+    }
+
+    .logo_about{
+        height: 40%;
+        width: 40%;
+    }
+
+    .desc_logo{
+        width: 100%;
+        height: unset;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: center;
+        margin-top: -100px;
+        margin-bottom: 10px;
     }
 
     .heading h1{
@@ -535,6 +597,7 @@
     .text{
         width: 100% !important;
         margin-bottom: 30px;
+        text-align: center;
     }
 
     .main_btn{

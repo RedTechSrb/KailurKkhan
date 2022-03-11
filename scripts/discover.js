@@ -24,8 +24,8 @@ function addEventListeners() {
 
 // fade-in content-a pri load-ovanju stranice
 function showContentLoad() {
-    document.getElementsByClassName('basic_info')[0].classList.add('slide-basic_info-in-initial');
-    document.getElementsByClassName('line')[0].classList.add('scale-line-in-vert');
+    document.getElementsByClassName('desc_logo')[0].classList.add('slide-basic_info-in-initial');
+    // document.getElementsByClassName('line')[0].classList.add('scale-line-in-vert');
     document.getElementsByClassName('desc')[0].classList.add('slide-desc-in-initial');
 
     let shadow = document.getElementsByClassName('shadow')[0];
@@ -61,7 +61,7 @@ function hideOverlay() {
 
 // fade-out content-a pri prikazivanju overlay menija
 function hideContent() {
-    let basic_info = document.getElementsByClassName('basic_info')[0];
+    let basic_info = document.getElementsByClassName('desc_logo')[0];
     removeAnimations(basic_info);
     basic_info.classList.add('slide-basic_info-out-overlay');
 
@@ -69,11 +69,11 @@ function hideContent() {
     removeAnimations(desc);
     desc.classList.add('slide-line-out-overlay');
 
-    let line = document.getElementsByClassName('line')[0];
-    removeAnimations(line);
-    line.classList.add('slide-desc-out-overlay');
+    // let line = document.getElementsByClassName('line')[0];
+    // removeAnimations(line);
+    // line.classList.add('slide-desc-out-overlay');
 
-    document.getElementsByClassName('next')[0].style.visibility = 'hidden';
+    // document.getElementsByClassName('next')[0].style.visibility = 'hidden';
     document.getElementsByClassName('header')[0].style.visibility = 'hidden';
     document.getElementsByClassName('menu')[0].style.visibility = 'visible';
 }
