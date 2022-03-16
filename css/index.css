@@ -80,6 +80,40 @@ body{
     z-index: 10;
 }
 
+.page_number{
+    width: 34%;
+    left: 0;
+}
+
+
+.reserved{
+    width: 200px;
+    bottom: 10%;
+    left: 4%;
+    color: white;
+    z-index: 10000;
+    font-family: 'Poppins';
+}
+
+.reserved p{
+    margin: 0;
+    color: gray;
+    font-size: 11px;
+}
+
+.reserved h3{
+    margin: 0;
+    font-size: 14px;
+}
+.number{
+    color: white;
+    font-size: 35px;
+    transform: rotate(-90deg);
+    font-family: 'Poppins';
+    justify-content: start;
+    width: 25%;
+}
+
 .fp-tableCell{
     width: 100%;
     position: relative;
@@ -100,7 +134,7 @@ body{
 }
 
 .content{
-    width: 92%;
+    width: 94.5%;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -115,6 +149,7 @@ body{
     -webkit-box-align: center;
         -ms-flex-align: center;
     align-items: center;
+    left: -1%;
 }
 
 .main{
@@ -393,12 +428,14 @@ body{
 /* trebalo bi da je okej ostaviti otkomentarisano: */
 .yachting .bg{
     background-image: url("../content/backgrounds/index/HOME(DESKTOP).jpg");
+    filter: blur(2px) brightness(70%);
+    -webkit-filter: blur(2px) brightness(70%);
 }
 
 .travel .bg{
     background-image: url("../content/backgrounds/index/As Seen On(DESKTOP).png");
-    filter: blur(5px) brightness(70%);
-    -webkit-filter: blur(5px) brightness(70%);
+    filter: blur(2px) brightness(70%);
+    -webkit-filter: blur(2px) brightness(70%);
 
 }
 
@@ -465,6 +502,7 @@ body{
         height: 80%;
         position: absolute;
         bottom: 0;
+        justify-content: center;
     }
 
     .content nav{
@@ -585,11 +623,43 @@ body{
         
     }
 
-    .content nav{
+    .potpis{
+        display: none;
+    }
+
+    .bar_code{
+        height: 10px;
+    }
+
+    .bar_code img{
+        height: 20px;
+    }
+
+    .reserved{
+        bottom: 8%;
+    }
+
+    .reserved h3{
+        font-size: 10px;
+    }
+
+    .reserved p{
+        font-size: 8px;
+    }
+
+    .number{
+        font-size: 24px;
+        width: 70%;
+        padding-bottom: 30%;
+        margin-right: 60%;
+    }
+
+    .page_number{
+        margin-bottom: 30%;
         position: absolute;
         top: unset;
         bottom: unset;
-        bottom: 25px;
+        bottom: 45px;
         height: 60px;
     }
 
@@ -607,6 +677,8 @@ body{
 @media (max-width: 425px) and (max-height: 650px) {
     .main{
         top: 3%;
+        left: 4%;
+        justify-content: center;
     }
 
     .heading{
@@ -637,6 +709,7 @@ body{
 @media (max-width: 425px) and (min-height: 600px) {
     .main{
         top: 5%;
+        left: 4%;
     }
 }
 

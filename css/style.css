@@ -57,6 +57,14 @@ body{
     filter: invert(100%);
 }
 
+.color_black{
+    filter: invert(100%);
+}
+
+.item:hover{
+    color: rgba(128, 128, 128, 0.8);
+}
+
 .footer{
     width: 92%;
     display: -webkit-box;
@@ -494,8 +502,9 @@ body{
 @media (max-width: 425px) {
 
     #logotip{
-        width: 150%;
-        height: 150%;
+        width: 140%;
+        height: 140%;
+        margin-right: 2px;
     }
 
     .header{
@@ -509,7 +518,7 @@ body{
 
     .menu{
         width: 24.2px;
-        height: 14px;
+        height: 24px;
     }
 
     .menu .menu_mid{

@@ -35,14 +35,16 @@
 
 .event1 .bg{
     background-image: url("../content/images/2Bona (As Seen On).png");
-    filter: blur(3px) brightness(70%);
-    -webkit-filter: blur(3px) brightness(70%);
+    filter: blur(4px) brightness(60%);
+    -webkit-filter: blur(4px) brightness(60%);
 }
 
 .event2 .bg{
     background-image: url("../content/images/MICMC(As Seen On).png");
     /* filter: blur(1px) brightness(80%);
     -webkit-filter: blur(1px) brightness(80%); */
+    filter: blur(4px) brightness(60%);
+    -webkit-filter: blur(4px) brightness(60%);
 }
 
 .vignette{
@@ -107,6 +109,11 @@
     text-decoration: none;
 }
 
+.image img{
+    width: 550px;
+    height: 550px;
+}
+
 .image .hover{
     width: 100%;
     height: 100%;
@@ -153,7 +160,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0%;
-    height: 100%;
+    height: 600px;
+    width: 600px;
 }
 
 .event2 .image{
@@ -161,7 +169,8 @@
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 600px;
+    width: 600px;
 }
 
 .image button{
@@ -205,6 +214,14 @@
     font-size: 3.75em;
     font-weight: 700;
     margin: 0;
+}
+
+.heading h3{
+    font-family: 'Overpass';
+    font-weight: 200;
+    font-size: 1.175em;
+    color: white;
+    margin-bottom: 0.2em;
 }
 
 .text{

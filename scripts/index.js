@@ -117,21 +117,21 @@ function displaySite() {
     }
 }
 
-function addEventListeners() {
-    let menu = $('.menu').eq(0);
-    menu.on('click', menuClicked);
+// function addEventListeners() {
+//     let menu = $('.menu').eq(0);
+//     menu.on('click', menuClicked);
 
-    let nav_links = $('.nav_item span');
-    for (let i = 0; i < nav_links.length; i++) {
-        nav_links.eq(i).on('click', navLinkClicked);
-    }
-}
+//     let nav_links = $('.nav_item span');
+//     for (let i = 0; i < nav_links.length; i++) {
+//         nav_links.eq(i).on('click', navLinkClicked);
+//     }
+// }
 
 function showContentInitial() {
     let header = $('.header');
         header[0].classList.add("show-header");
         
-        let nav = $('.yachting nav');
+        let nav = $('.yachting .page_number');
         nav[0].classList.add("slide-nav-in-scroll");
 
 
@@ -195,39 +195,39 @@ function showContentInitial() {
         scroll_gesture.css("transition", "transform 0.5s ease-out 0.3s, opacity 0.5s ease-out 0.3s"); */
 }
 
-function navLinkClicked() {
-    let classList = this.classList;
-    if (classList.contains('nav_yachting')) {
-        fullpage_api.moveTo(1);
-    }
-    else if (classList.contains('nav_travel')) {
-        fullpage_api.moveTo(2);
-    }
-    else if (classList.contains('nav_entertainment')) {
-        fullpage_api.moveTo(3);
-    }
-    else if (classList.contains('nav_sport')) {
-        fullpage_api.moveTo(4);
-    }
-    else if (classList.contains('nav_transport')) {
-        fullpage_api.moveTo(5);
-    }
-    else if (classList.contains('nav_celebrations')) {
-        fullpage_api.moveTo(6);
-    }
-    else if (classList.contains('nav_luxury_items')) {
-        fullpage_api.moveTo(7);
-    }
-    else if (classList.contains('nav_wellness')) {
-        fullpage_api.moveTo(8);
-    }
-    else if (classList.contains('nav_events')) {
-        fullpage_api.moveTo(9);
-    }
-    else if (classList.contains('nav_networking')) {
-        fullpage_api.moveTo(10);
-    }
-}
+// function navLinkClicked() {
+//     let classList = this.classList;
+//     if (classList.contains('nav_yachting')) {
+//         fullpage_api.moveTo(1);
+//     }
+//     else if (classList.contains('nav_travel')) {
+//         fullpage_api.moveTo(2);
+//     }
+//     else if (classList.contains('nav_entertainment')) {
+//         fullpage_api.moveTo(3);
+//     }
+//     else if (classList.contains('nav_sport')) {
+//         fullpage_api.moveTo(4);
+//     }
+//     else if (classList.contains('nav_transport')) {
+//         fullpage_api.moveTo(5);
+//     }
+//     else if (classList.contains('nav_celebrations')) {
+//         fullpage_api.moveTo(6);
+//     }
+//     else if (classList.contains('nav_luxury_items')) {
+//         fullpage_api.moveTo(7);
+//     }
+//     else if (classList.contains('nav_wellness')) {
+//         fullpage_api.moveTo(8);
+//     }
+//     else if (classList.contains('nav_events')) {
+//         fullpage_api.moveTo(9);
+//     }
+//     else if (classList.contains('nav_networking')) {
+//         fullpage_api.moveTo(10);
+//     }
+// }
 
 // skidanje svih animacija sa elementa radi ponovnog startovanja
 function removeAnimations(element) {
@@ -333,7 +333,7 @@ function hideOverlay() {
     /* show content */
     $('.header').css('visibility', 'visible');
 
-    let nav = $('nav').eq(i);
+    let nav = $('.page_number').eq(i);
     removeAnimations(nav[0]);
     nav[0].classList.add("slide-nav-in-overlay");
 
@@ -358,14 +358,14 @@ function hideOverlay() {
 new fullpage('#fullpage', {
     //options here
     autoScrolling:true,
-    fixedElements: '.header, #overlay, .footer',
+    fixedElements: '.header, #overlay, .footer, .reserved',
     scrollingSpeed: SCROLL_SPEED_SECONDS * 1000,
     loopBottom: true,
     scrollBar: false,
     licenseKey: '6821F0C7-7DE34D29-B2F61DB6-BD3A10D9',
     onLeave: function(origin, destination, direction) { /* animacije pri napustanju jedne i ulaska u drugu stranicu */
         /* animate left section */
-        let menus = $('nav');
+        let menus = $('.page_number');
         removeAnimations(menus.eq(origin.index)[0]);
         menus.eq(origin.index)[0].classList.add("slide-nav-out-scroll");
 

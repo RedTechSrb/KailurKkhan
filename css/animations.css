@@ -82,8 +82,8 @@
 }
 
 .slide-basic_info-in-initial {
-	-webkit-animation: slide-in-left-short 0.5s ease-out 0.5s both;
-	        animation: slide-in-left-short 0.5s ease-out 0.5s both;
+	-webkit-animation: slide-in-left-short 0.3s ease-out 0.3s both;
+	        animation: slide-in-left-short 0.3s ease-out 0.3s both;
 }
 
 @-webkit-keyframes slide-in-left-short {
@@ -200,8 +200,8 @@
 }
 
 .slide-desc-in-initial{
-    -webkit-animation: slide-in-right 0.5s ease-out 0.5s both;
-            animation: slide-in-right 0.5s ease-out 0.5s both;
+    -webkit-animation: slide-in-right 0.4s ease-out 0.4s both;
+            animation: slide-in-right 0.4s ease-out 0.4s both;
 }
 
 @-webkit-keyframes slide-in-right {
