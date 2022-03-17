@@ -111,7 +111,8 @@ body{
     transform: rotate(-90deg);
     font-family: 'Poppins';
     justify-content: start;
-    width: 25%;
+    width: 30%;
+    padding-bottom: 25px;
 }
 
 .fp-tableCell{
@@ -171,6 +172,7 @@ body{
     -ms-flex-item-align: start;
     align-self: flex-start;
     margin-top: -50px;
+    padding-right: 20px;
 }
 
 .heading{
@@ -462,6 +464,11 @@ body{
     .main{
         margin-top: -30px;
     }
+
+    .number{
+        width: 40%;
+        padding-bottom: 20px;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -709,7 +716,7 @@ body{
 @media (max-width: 425px) and (min-height: 600px) {
     .main{
         top: 5%;
-        left: 4%;
+        left: 5%;
     }
 }
 

@@ -160,10 +160,10 @@ body{
 }
 
 .menu .menu_mid::before{
-    width: 40.8px;
-    -webkit-transform: translate(10.2px, -9px);
-        -ms-transform: translate(10.2px, -9px);
-            transform: translate(10.2px, -9px);
+    width: 51px;
+    -webkit-transform: translate(0px, -9px);
+        -ms-transform: translate(0px, -9px);
+            transform: translate(0px, -9px);
 }
 
 .menu .menu_mid::after{
@@ -314,20 +314,20 @@ body{
 
     .menu .menu_mid{
         width: 45.69px;
-        height: 3px;
+        height: 4px;
     }
 
     .menu .menu_mid::before{
         width: 36.5px;
-        height: 3px;
-        -webkit-transform: translate(9.19px, -9px);
-            -ms-transform: translate(9.19px, -9px);
-                transform: translate(9.19px, -9px);
+        height: 4px;
+        -webkit-transform: translate(0px, -9px);
+            -ms-transform: translate(0px, -9px);
+                transform: translate(0px, -9px);
     }
     
     .menu .menu_mid::after{
         width: 22.85px;
-        height: 3px;
+        height: 4px;
         -webkit-transform: translate(22.84px, 9px);
             -ms-transform: translate(22.84px, 9px);
                 transform: translate(22.84px, 9px);
@@ -504,7 +504,10 @@ body{
     #logotip{
         width: 140%;
         height: 140%;
-        margin-right: 2px;
+    }
+
+    .logo_tip{
+        padding-right: 22px;
     }
 
     .header{
@@ -526,10 +529,10 @@ body{
     }
 
     .menu .menu_mid::before{
-        width: 19.36px;
-        -webkit-transform: translate(4.84px, -4px);
-            -ms-transform: translate(4.84px, -4px);
-                transform: translate(4.84px, -4px);
+        width: 24.2px;
+        -webkit-transform: translate(0px, -4px);
+            -ms-transform: translate(0px, -4px);
+                transform: translate(0px, -4px);
     }
     
     .menu .menu_mid::after{

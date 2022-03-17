@@ -264,9 +264,9 @@ function showOverlay() {
         setTimeout(function() { menu_mid[0].classList.remove('transitionable'); }, 250);
 
         /* hide content */
-        let nav = $('nav').eq(i);
-        removeAnimations(nav[0]);
-        nav[0].classList.add("slide-nav-out-overlay");
+        // let nav = $('nav').eq(i);
+        // removeAnimations(nav[0]);
+        // nav[0].classList.add("slide-nav-out-overlay");
 
         let main = $('.main').eq(i);
         removeAnimations(main[0]);
@@ -302,6 +302,16 @@ function showOverlay() {
         fullpage_api.setAllowScrolling(false, 'down');
         fullpage_api.setAllowScrolling(false, 'up');
     } 
+}
+
+function addEventListeners() {
+    let menu = $('.menu').eq(0);
+    menu.on('click', menuClicked);
+
+    let nav_links = $('.nav_item span');
+    for (let i = 0; i < nav_links.length; i++) {
+        nav_links.eq(i).on('click', navLinkClicked);
+    }
 }
 
 function hideOverlay() {

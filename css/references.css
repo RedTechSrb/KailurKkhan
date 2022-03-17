@@ -36,100 +36,100 @@
 
 .reference1 .bg{
     background-image: url("../content/REFERENCES/bergerm_background.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference2 .bg{
     background-image: url("../content/REFERENCES/levelup_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference3 .bg{
     background-image: url("../content/REFERENCES/Bake_background1.png");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference4 .bg{
     background-image: url("../content/REFERENCES/getlow_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference5 .bg{
     background-image: url("../content/REFERENCES/7DRing_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference6 .bg{
     background-image: url("../content/REFERENCES/gitar_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference7 .bg{
     background-image: url("../content/REFERENCES/friction_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference8 .bg{
     background-image: url("../content/REFERENCES/tropical_background1.png");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference9 .bg{
     background-image: url("../content/REFERENCES/elekspade_background1.png");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference10 .bg{
     background-image: url("../content/REFERENCES/JALABRAT_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 .reference11 .bg{
     background-image: url("../content/REFERENCES/Djekson_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 .reference12 .bg{
     background-image: url("../content/REFERENCES/2bonakun_background1.png");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 .reference13 .bg{
     background-image: url("../content/REFERENCES/2bonabontoni_background1.png");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 .reference14 .bg{
     background-image: url("../content/REFERENCES/mreverethinng_background1.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference15 .bg{
     background-image: url("../content/REFERENCES/jasonhardi_background1.png");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference16 .bg{
     background-image: url("../content/REFERENCES/micmc_background.jpg");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 
 .reference17 .bg{
     background-image: url("../content/REFERENCES/mackdames_background1.png");
-    filter: blur(4px) brightness(60%);
-    -webkit-filter: blur(4px) brightness(60%);
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
 }
 .vignette{
     visibility: hidden;
@@ -178,8 +178,8 @@
 }
 
 .image{
-    width: 600px;
-    height: 800px;
+    width: 500px;
+    height: 700px;
     /* margin-right: 2.4%; */
     position: relative;
     display: -webkit-box;
@@ -192,8 +192,33 @@
     background-color: white;
     text-decoration: none;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.image_name{
+    color: white;
+    font-size: 30px;
+    font-family: 'Poppins';
+    z-index: 10000;
+    width: 100px;
+    margin-top: 310px;
+}
+
+.image_name h1{
+    transform: rotate(-90deg);
+    width: 400px;
+    padding-bottom: 270px;
+}
+
+.info{
+    margin-bottom: 20px;
+}
+
+.story{
+    margin-top: 20px;
 }
 
 .image .hover{
@@ -383,7 +408,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 2.4%;
+    margin-left: 2.7%;
     height: 100%;
     width:600px
 }
@@ -581,7 +606,7 @@
         opacity: 1;
     }
 
-    .image .hover .g_calendar{
+    .image .hover img{
         -webkit-transform: scale(1);
             -ms-transform: scale(1);
                 transform: scale(1);
@@ -673,7 +698,8 @@
     }
 
     .image .hover{
-        height: 10%;
+        display: none;
+        /* height: 10%;
         bottom: 15%;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -691,7 +717,7 @@
         -webkit-transition: none !important;
         -o-transition: none !important;
         transition: none !important;
-        background: none !important;
+        background: none !important; */
     }
 
     .image .hover .add{
@@ -796,13 +822,39 @@
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start;
+    } 
+
+    .story{
+        display: none;
     }
 
     .image{
-        width: 77vw;
-        height: 82.4vw;
-        margin-top: 15%;
-        margin-bottom: 0;
+        height: 300px;
+        width: 300px;
+        /* margin-top: 15%; */
+        margin-bottom: 10%;
+
+    }
+
+    .image img{
+        transform: scale(0.7);
+        height: auto;
+        width: auto;
+    }
+
+    .image_name{
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .image_name h1{
+        transform: rotate(0deg);
+        padding-bottom: 0px;
+        padding-top: 30px;
+    }
+
+    .hover{
+        display: none;
     }
 
     .image .hover{
@@ -819,20 +871,22 @@
     }
 
     .heading{
-        margin-top: 1em;
+        margin-top: 0.7em;
     }
 
-    .heading h1{
-        font-size: 2.1875em;
+    .heading h3{
+        font-size: 1.2em;
     }
 
-    .text{
+
+    /* .text{
         margin-bottom: 0.6em;
         margin-top: 0.6em;
-    }
+    } */
 
     .text p{
         font-size: 0.75em;
+        margin: 0;
     }
 
     .main_btn{
@@ -846,18 +900,7 @@
         font-weight: 600;
     }   
     
-    .event2 .bg{
-        background: url("../content/images/MICMC(As Seen On).png");
-    }
 
-    .event2 .image{
-        background: url("../content/images/MICMC(As Seen On).png");
-        background-size: cover;
-    }
-
-    .event3 .bg{
-        background-position: 40% 0%;
-    }
 }
 
 @media (max-width: 500px) and (max-height: 700px) {

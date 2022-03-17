@@ -265,7 +265,7 @@
     margin-bottom: 35px;
 }
 
-.potpis{
+.potpis_about{
     padding: 0 35px;
     border-bottom: 1px solid white;
 }
@@ -633,10 +633,16 @@
     }
 
     .footer_about{
-        width: 100%;
+        width: 92%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        -webkit-box-align: center;
         bottom: 0%;
+        left: 4%;
+    }
+
+    .potpis{
+        display: none;
     }
 
     .logo_about{

@@ -129,6 +129,9 @@ function loadImages() {
     
         let image = $('.image').eq(0);
         image[0].classList.add("slide-image-in-scroll");
+
+        let name = $('.image_name').eq(0);
+        name[0].classList.add("slide-image-in-scroll");
     
         let desc = $('.desc').eq(0);
         desc[0].classList.add("slide-desc-in-scroll");
@@ -208,6 +211,10 @@ function loadImages() {
             removeAnimations(image[0]);
             image[0].classList.add("slide-image-out-overlay");
     
+            let name = $('.image_name').eq(i);
+            removeAnimations(name[0]);
+            name[0].classList.add("slide-image-out-overlay");
+
             let desc = $('.desc').eq(i);
             removeAnimations(desc[0]);
             desc[0].classList.add("slide-desc-out-overlay");
@@ -274,6 +281,10 @@ function loadImages() {
         removeAnimations(image[0]);
         image[0].classList.add("slide-image-in-overlay");
     
+        let name = $('.image_name').eq(i);
+        removeAnimations(name[0]);
+        name[0].classList.add("slide-image-out-overlay");
+
         let desc = $('.desc').eq(i);
         removeAnimations(desc[0]);
         desc[0].classList.add("slide-desc-in-overlay");
@@ -297,6 +308,10 @@ function loadImages() {
         removeAnimations(nav[0]);
         image[0].classList.add("slide-image-out-overlay");
     
+        let name = $('.image_name').eq(i);
+        removeAnimations(name[0]);
+        name[0].classList.add("slide-image-out-overlay");
+
         let desc = $('.desc').eq(i);
         removeAnimations(main[0]);
         desc[0].classList.add("slide-desc-out-overlay");
@@ -354,6 +369,10 @@ function loadImages() {
         removeAnimations(nav[0]);
         image[0].classList.add("slide-image-in-overlay");
     
+        let name = $('.image_name').eq(i);
+        removeAnimations(name[0]);
+        name[0].classList.add("slide-image-out-overlay");
+
         let desc = $('.desc').eq(i);
         removeAnimations(main[0]);
         desc[0].classList.add("slide-desc-in-overlay");
@@ -385,6 +404,10 @@ function loadImages() {
             removeAnimations(image.eq(origin.index)[0]);
             image.eq(origin.index)[0].classList.add("slide-image-out-scroll");
     
+            let name = $('.image_name');
+            removeAnimations(name.eq(origin.index)[0]);
+            name.eq(origin.index)[0].classList.add("slide-image-out-scroll");
+
             let desc = $('.desc');
             removeAnimations(desc.eq(origin.index)[0]);
             desc.eq(origin.index)[0].classList.add("slide-desc-out-scroll");
@@ -402,6 +425,9 @@ function loadImages() {
     
             removeAnimations(image.eq(destination.index)[0]);
             image.eq(destination.index)[0].classList.add("slide-image-in-scroll");
+
+            removeAnimations(name.eq(destination.index)[0]);
+            name.eq(destination.index)[0].classList.add("slide-image-in-scroll");
         },
         afterRender: function() {}
     });
