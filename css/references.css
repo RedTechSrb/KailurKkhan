@@ -131,6 +131,14 @@
     filter: blur(6px) brightness(60%);
     -webkit-filter: blur(6px) brightness(60%);
 }
+
+
+.reference18 .bg{
+    background-image: url("../content/REFERENCES/DJArchitect_background.png");
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
+}
+
 .vignette{
     visibility: hidden;
     width: 100%;
@@ -192,8 +200,8 @@
     background-color: white;
     text-decoration: none;
     justify-content: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
     margin-top: 20px;
     margin-right: 20px;
 }
@@ -376,6 +384,13 @@
 
 .reference17 .image{
     background: url("../content/REFERENCES/mackdames.png");
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.reference18 .image{
+    background: url("../content/REFERENCES/DJArchitect.png");
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
@@ -687,9 +702,10 @@
     .image{
         width: 60%;
         height: 50%;
-        margin: 0;
-        margin-top: 7%;
-        margin-bottom: 15px;
+        margin-top: 0;
+        margin-right: 0;
+        /* margin-top: 7%;
+        margin-bottom: 15px; */
     }
 
     .slide-image-in-scroll{
@@ -824,33 +840,38 @@
                 align-items: flex-start;
     } 
 
+    .info{
+        display: none;
+    }
+
     .story{
         display: none;
     }
 
     .image{
-        height: 300px;
+        height: 460px;
         width: 300px;
+        right: 2%;
         /* margin-top: 15%; */
-        margin-bottom: 10%;
-
-    }
-
-    .image img{
-        transform: scale(0.7);
-        height: auto;
-        width: auto;
+        /* margin-bottom: 50%;
+        padding-bottom: 20%; */
+        margin-bottom: 0px;
+        /* transform: scale(0.9) translateY(-25px);
+        -webkit-transform: scale(0.9) translateY(-25px); */
     }
 
     .image_name{
         margin-top: 0px;
         font-size: 20px;
+        margin-right: 100px;
     }
 
     .image_name h1{
         transform: rotate(0deg);
         padding-bottom: 0px;
-        padding-top: 30px;
+        margin-bottom: 0;
+        /* padding-top: 30px; */
+        /* left: 4%; */
     }
 
     .hover{
