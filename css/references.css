@@ -209,7 +209,7 @@
 .image_name{
     color: white;
     font-size: 30px;
-    font-family: 'Poppins';
+    font-family: 'Overpass';
     z-index: 10000;
     width: 100px;
     margin-top: 310px;
@@ -272,128 +272,145 @@
 .reference1 .image{
     background: url("../content/REFERENCES/bergerm.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: 0% 0%;
 }
 
 .reference2 .image{
     background: url("../content/REFERENCES/levelup.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference3 .image{
     background: url("../content/REFERENCES/Bake.png");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference4 .image{
     background: url("../content/REFERENCES/getlow.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference5 .image{
     background: url("../content/REFERENCES/7DRing.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference6 .image{
     background: url("../content/REFERENCES/gitar.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference7 .image{
     background: url("../content/REFERENCES/friction.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference8 .image{
     background: url("../content/REFERENCES/tropical.PNG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference9 .image{
     background: url("../content/REFERENCES/elekspade.PNG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference10 .image{
     background: url("../content/REFERENCES/JALA\ BRAT.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference11 .image{
     background: url("../content/REFERENCES/Djekson.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference12 .image{
     background: url("../content/REFERENCES/2bonakun.png");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference13 .image{
     background: url("../content/REFERENCES/2bonabontoni.png");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference14 .image{
     background: url("../content/REFERENCES/mreverethinng.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference15 .image{
     background: url("../content/REFERENCES/jasonhardi.PNG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference16 .image{
     background: url("../content/REFERENCES/mic\ mc.JPG");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference17 .image{
     background: url("../content/REFERENCES/mackdames.png");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .reference18 .image{
     background: url("../content/REFERENCES/DJArchitect.png");
     background-position: center; 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 .image button{
@@ -826,50 +843,48 @@
 
     .content{
         width: 77%;
-        min-height: 85vh;
-        height: 85vh;
-        top: 50px;
+        min-height: 80vh;
+        height: 80vh;
+        top: 20px;
         position: absolute;
         bottom: 3%;
-        margin-left: 5%;
+        /* margin-left: 5%; */
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start;
+        
+        left: 0%;    
     } 
-
-    .info{
-        display: none;
-    }
 
     .story{
         display: none;
     }
 
+    .info{
+        display: none;
+    }
+
     .image{
-        height: 460px;
+        height: 360px;
         width: 300px;
-        right: 2%;
-        /* margin-top: 15%; */
-        /* margin-bottom: 50%;
-        padding-bottom: 20%; */
-        margin-bottom: 0px;
-        /* transform: scale(0.9) translateY(-25px);
-        -webkit-transform: scale(0.9) translateY(-25px); */
+        margin-bottom: 50px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .image_name{
-        margin-top: 0px;
-        font-size: 20px;
-        margin-right: 100px;
+        margin-top: 40px;
+        font-size: 16px;
+        left: 0;
     }
 
     .image_name h1{
         transform: rotate(0deg);
         padding-bottom: 0px;
-        margin-bottom: 0;
+        margin-bottom: 10px;
         /* padding-top: 30px; */
         /* left: 4%; */
     }
@@ -889,6 +904,8 @@
             -ms-flex-pack: space-evenly;
                 justify-content: space-evenly;
         height: unset;
+        
+        /* margin-top: 30px; */
     }
 
     .heading{

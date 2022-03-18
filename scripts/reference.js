@@ -13,7 +13,7 @@
 
 $(function () {
     /* loading ekran dok se slike ne ucitaju */
-    if (!sessionStorage.getItem('upcoming_events-loaded')) {
+    if (!sessionStorage.getItem('references-loaded')) {
         $('.loading').eq(0).css("visibility", "visible");
         loadImages();
         setTimeout(function() {
@@ -31,7 +31,7 @@ $(function () {
 var loadedCount = 0;
 var displayed = false;
 var can_display = false;
-const TO_LOAD_COUNT = 9;
+const TO_LOAD_COUNT = 18;
 const SCROLL_SPEED_SECONDS = 1;
 const IMAGE_HOVER_SECONDS = 0.25;
 
@@ -41,47 +41,87 @@ const animationList = ["slide-image-in-initial", "slide-desc-in-initial", "slide
 "slide-gesture-out-scroll", "slide-gesture-in-scroll"]
 
 function loadImages() {
-    $('<img/>').attr('src', '../content/backgrounds/events/event1.jpg').on('load', function() {
+    $('<img/>').attr('src', '../content/REFERENCES/2bonabontoni.png').on('load', function() {
         $(this).remove();
         loadedCount++;
         if (loadedCount == TO_LOAD_COUNT) can_display = true;
     });
-    $('<img/>').attr('src', '../content/backgrounds/events/event2.jpg').on('load', function() {
+    $('<img/>').attr('src', '../content/REFERENCES/2bonakun.png').on('load', function() {
         $(this).remove();
         loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
-        $('<img/>').attr('src', '../content/backgrounds/events/event2_mobile.jpg').on('load', function() {
+        $('<img/>').attr('src', '../content/REFERENCES/7DRing.JPG').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
-        $('<img/>').attr('src', '../content/backgrounds/events/event3.jpg').on('load', function() {
+        $('<img/>').attr('src', '../content/REFERENCES/Bake.png').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
-        $('<img/>').attr('src', '../content/images/event1_s.jpg').on('load', function() {
+        $('<img/>').attr('src', '../content/REFERENCES/DJArchitect.png').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
-        $('<img/>').attr('src', '../content/images/event2_s.jpg').on('load', function() {
+        $('<img/>').attr('src', '../content/REFERENCES/Djekson.JPG').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
-        $('<img/>').attr('src', '../content/images/event2_s_mobile.jpg').on('load', function() {
+        $('<img/>').attr('src', '../content/REFERENCES/elekspade.PNG').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
-        $('<img/>').attr('src', '../content/images/event3_s.jpg').on('load', function() {
+        $('<img/>').attr('src', '../content/REFERENCES/friction.JPG').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
-        $('<img/>').attr('src', '../content/images/7D_logo.png').on('load', function() {
+        $('<img/>').attr('src', '../content/REFERENCES/getlow.JPG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/gitar.JPG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/JALA BRAT.JPG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/jasonhardi.PNG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/levelup.JPG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/mackdames.png').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/mic mc.JPG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/mreverethinng.JPG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/tropical.PNG').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
@@ -102,7 +142,7 @@ function loadImages() {
             menu_items.css("position", "static");
             menu_items.css("visibility", "visible");
     
-            sessionStorage.setItem('upcoming_events-loaded', true);
+            sessionStorage.setItem('references-loaded', true);
             showContentInitial();
             displayed = true;
         }

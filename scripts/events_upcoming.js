@@ -18,7 +18,7 @@ $(function () {
 var loadedCount = 0;
 var displayed = false;
 var can_display = false;
-const TO_LOAD_COUNT = 9;
+const TO_LOAD_COUNT = 2;
 const SCROLL_SPEED_SECONDS = 1;
 const IMAGE_HOVER_SECONDS = 0.25;
 
@@ -28,47 +28,12 @@ const animationList = ["slide-image-in-initial", "slide-desc-in-initial", "slide
 "slide-gesture-out-scroll", "slide-gesture-in-scroll"]
 
 function loadImages() {
-    $('<img/>').attr('src', '../content/backgrounds/events/event1.jpg').on('load', function() {
+    $('<img/>').attr('src', '../content/images/2Bona (As Seen On).png').on('load', function() {
         $(this).remove();
         loadedCount++;
         if (loadedCount == TO_LOAD_COUNT) can_display = true;
     });
-    $('<img/>').attr('src', '../content/backgrounds/events/event2.jpg').on('load', function() {
-        $(this).remove();
-        loadedCount++;
-        if (loadedCount == TO_LOAD_COUNT) can_display = true;
-    });
-    $('<img/>').attr('src', '../content/backgrounds/events/event2_mobile.jpg').on('load', function() {
-        $(this).remove();
-        loadedCount++;
-        if (loadedCount == TO_LOAD_COUNT) can_display = true;
-    });
-    $('<img/>').attr('src', '../content/backgrounds/events/event3.jpg').on('load', function() {
-        $(this).remove();
-        loadedCount++;
-        if (loadedCount == TO_LOAD_COUNT) can_display = true;
-    });
-    $('<img/>').attr('src', '../content/images/event1_s.jpg').on('load', function() {
-        $(this).remove();
-        loadedCount++;
-        if (loadedCount == TO_LOAD_COUNT) can_display = true;
-    });
-    $('<img/>').attr('src', '../content/images/event2_s.jpg').on('load', function() {
-        $(this).remove();
-        loadedCount++;
-        if (loadedCount == TO_LOAD_COUNT) can_display = true;
-    });
-    $('<img/>').attr('src', '../content/images/event2_s_mobile.jpg').on('load', function() {
-        $(this).remove();
-        loadedCount++;
-        if (loadedCount == TO_LOAD_COUNT) can_display = true;
-    });
-    $('<img/>').attr('src', '../content/images/event3_s.jpg').on('load', function() {
-        $(this).remove();
-        loadedCount++;
-        if (loadedCount == TO_LOAD_COUNT) can_display = true;
-    });
-    $('<img/>').attr('src', '../content/images/7D_logo.png').on('load', function() {
+    $('<img/>').attr('src', '../content/images/MICMC(As Seen On).png').on('load', function() {
         $(this).remove();
         loadedCount++;
         if (loadedCount == TO_LOAD_COUNT) can_display = true;
