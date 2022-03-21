@@ -26,7 +26,7 @@ const animationList = [
     'slide-nav-in-scroll', 'slide-main-in-scroll', 'slide-contact-in-scroll', 'slide-gesture-in-scroll', 'slide-gesture-out-scroll',
     'slide-contact-out-scroll', 'slide-main-out-scroll', 'slide-nav-out-scroll', 'slide-nav-out-overlay', 'slide-main-out-overlay', 
     'slide-contact-out-overlay', 'slide-gesture-out-overlay', 'slide-nav-in-overlay', 'slide-main-in-overlay', 'slide-contact-in-overlay', 
-    'slide-gesture-in-overlay'
+    'slide-gesture-in-overlay', 'slide-in-top-scroll', 'slide-out-top-scroll'
 ];
 
 function isMobile() {
@@ -119,60 +119,15 @@ function showContentInitial() {
         let nav = $('.yachting .page_number');
         nav[0].classList.add("slide-nav-in-scroll");
 
-
-        /* let select_indicators = $('.yachting .select_indicator');
-        select_indicators.css("transform", "translateY(0)");
-        select_indicators.css("opacity", "1");
-        select_indicators.css("transition", "transform 0.8s ease-out, opacity 0.8s ease-out"); */
-        
-        /* let select_indicators = $('.yachting .select_indicators .select_indicator');
-        for (let i = 0; i < select_indicators.length; i++) {
-            select_indicators.eq(i).css("transform", "translateY(0)");
-            select_indicators.eq(i).css("opacity", "1");
-            select_indicators.eq(i).css("transition", "transform 0.5s ease-out " + i * 0.033 + "s, opacity 0.5s ease-out " + i * 0.033 + "s");
-        } */
-
-        /* let nav_items = $('.yachting .nav_items .nav_item');
-        for (let i = 0; i < nav_items.length; i++) {
-            nav_items.eq(i).css("transform", "translateY(0)");
-            nav_items.eq(i).css("opacity", "1");
-            nav_items.eq(i).css("transition", "transform 0.5s ease-out " + i * 0.033 + "s, opacity 0.5s ease-out " + i * 0.033 + "s");
-        }
-        setTimeout(function() { nav_items.css("transition", "none"); }, 800); */
-
         let main = $('.yachting .main');
         main[0].classList.add("slide-main-in-scroll");
-
-        /* let heading = $('.yachting .heading');
-        let text = $('.yachting .text');
-        let discover = $('.yachting .main_btn');
-
-        heading.css("transform", "translateY(0)");
-        heading.css("opacity", "1");
-        heading.css("transition", "transform 0.5s ease-out, opacity 0.5s ease-out");
-
-        text.css("transform", "translateY(0)");
-        text.css("opacity", "1");
-        text.css("transition", "transform 0.5s ease-out 0.15s, opacity 0.5s ease-out 0.15s");
-
-        discover.css("transform", "translateY(0)");
-        discover.css("opacity", "1");
-        discover.css("transition", "transform 0.5s ease-out 0.3s, opacity 0.5s ease-out 0.3s"); */
-
 
         let contact = $('.yachting .contact');
         contact[0].classList.add("slide-contact-in-scroll");
 
-        /* let contacts = $('.yachting .contact a');
-        for (let i = 0; i < contacts.length; i++) {
-            console.log(i);
-            contacts.eq(i).css("transform", "translateY(0)");
-            contacts.eq(i).css("opacity", "1");
-            contacts.eq(i).css("transition", "transform 0.7s ease-out " + 0.1 * i + "s, opacity 0.7s ease-out " + 0.1 * i + "s");
-        } */
-
-        let scroll_gesture = $('.yachting .scroll_gesture');
-        scroll_gesture[0].classList.add("slide-gesture-in-scroll");
+    
+        let scroll_gesture = $('.scroll_gesture');
+        scroll_gesture[0].classList.add("slide-in-top-scroll");
 
         /* let scroll_gesture = $('.yachting .scroll_gesture');
         scroll_gesture.css("transform", "translateY(0)");
@@ -180,39 +135,6 @@ function showContentInitial() {
         scroll_gesture.css("transition", "transform 0.5s ease-out 0.3s, opacity 0.5s ease-out 0.3s"); */
 }
 
-// function navLinkClicked() {
-//     let classList = this.classList;
-//     if (classList.contains('nav_yachting')) {
-//         fullpage_api.moveTo(1);
-//     }
-//     else if (classList.contains('nav_travel')) {
-//         fullpage_api.moveTo(2);
-//     }
-//     else if (classList.contains('nav_entertainment')) {
-//         fullpage_api.moveTo(3);
-//     }
-//     else if (classList.contains('nav_sport')) {
-//         fullpage_api.moveTo(4);
-//     }
-//     else if (classList.contains('nav_transport')) {
-//         fullpage_api.moveTo(5);
-//     }
-//     else if (classList.contains('nav_celebrations')) {
-//         fullpage_api.moveTo(6);
-//     }
-//     else if (classList.contains('nav_luxury_items')) {
-//         fullpage_api.moveTo(7);
-//     }
-//     else if (classList.contains('nav_wellness')) {
-//         fullpage_api.moveTo(8);
-//     }
-//     else if (classList.contains('nav_events')) {
-//         fullpage_api.moveTo(9);
-//     }
-//     else if (classList.contains('nav_networking')) {
-//         fullpage_api.moveTo(10);
-//     }
-// }
 
 // skidanje svih animacija sa elementa radi ponovnog startovanja
 function removeAnimations(element) {
@@ -239,14 +161,34 @@ function showOverlay() {
             if (sections.eq(i)[0].classList.contains("active")) break;
         }
 
-        /* animate menu */
+        // animate menu
         let menu = $('.menu').eq(0);
         menu[0].classList.add('open');
-        menu.off("click", menuClicked);
-        setTimeout(function(){ menu.on("click", menuClicked); }, 1500);
-        let menu_mid = $('.menu_mid').eq(0);
-        menu_mid[0].classList.add('transitionable');
-        setTimeout(function() { menu_mid[0].classList.remove('transitionable'); }, 250);
+
+        let lines = $('.menu div');
+        for (let i = 0; i < lines.length; i++) {
+            lines.eq(i).css('transition-delay', '0s');
+            lines.eq(i).css('transform', 'translate(0, 50px)');
+        }
+
+        let arrow = $('.menu img');
+        arrow.eq(0).css('transform', 'translate(0, 0)');
+
+        // let logo = $('#logo');
+        // logo.css('visibility', 'hidden');
+
+        // show overlay
+        let overlay = $('#overlay');
+        overlay.css('transform', 'translateX(0)');
+
+        /* animate menu */
+        // menu = $('.menu').eq(0);
+        // menu[0].classList.add('open');
+        // menu.off("click", menuClicked);
+        // setTimeout(function(){ menu.on("click", menuClicked); }, 1500);
+        // let menu_mid = $('.menu_mid').eq(0);
+        // menu_mid[0].classList.add('transitionable');
+        // setTimeout(function() { menu_mid[0].classList.remove('transitionable'); }, 250);
 
         /* hide content */
         // let nav = $('nav').eq(i);
@@ -261,9 +203,9 @@ function showOverlay() {
         removeAnimations(contact[0]);
         contact[0].classList.add("slide-contact-out-overlay");
         
-        let scroll_gesture = $('.scroll_gesture').eq(i);
-        removeAnimations(scroll_gesture[0]);
-        scroll_gesture[0].classList.add("slide-gesture-out-overlay");
+        // let scroll_gesture = $('.scroll_gesture').eq(i);
+        // removeAnimations(scroll_gesture[0]);
+        // scroll_gesture[0].classList.add("slide-gesture-out-overlay");
 
         $('.header').css('visibility', 'hidden');
         menu.css('visibility', 'visible');
@@ -380,7 +322,7 @@ new fullpage('#fullpage', {
 
         let scroll_gestures = $('.scroll_gesture');
         removeAnimations(scroll_gestures.eq(origin.index)[0]);
-        scroll_gestures.eq(origin.index)[0].classList.add("slide-gesture-out-scroll");
+        scroll_gestures.eq(origin.index)[0].classList.add("slide-out-top-scroll");
 
         /* parallax */
         let bgs = $('.bg');
@@ -394,7 +336,7 @@ new fullpage('#fullpage', {
         bgs.eq(destination.index).css("transition", "transform " + SCROLL_SPEED_SECONDS + 's ease-out');
 
         removeAnimations(scroll_gestures.eq(destination.index)[0]);
-        scroll_gestures.eq(destination.index)[0].classList.add("slide-gesture-in-scroll");
+        scroll_gestures.eq(destination.index)[0].classList.add("slide-in-top-scroll");
 
         removeAnimations(contacts.eq(destination.index)[0]);
         contacts.eq(destination.index)[0].classList.add("slide-contact-in-scroll");

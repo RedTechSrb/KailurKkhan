@@ -4,6 +4,16 @@
             animation: scale-in-ver-center 0.5s 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.slide-in-top-scroll {
+    -webkit-animation: slide-in-top-200 1s ease-out both;
+            animation: slide-in-top-200 1s ease-out both;
+}
+
+.slide-out-top-scroll {
+    -webkit-animation: slide-out-top-200 1s ease-out backwards;
+            animation: slide-out-top-200 1s ease-out backwards;
+}
+
 @-webkit-keyframes scale-in-ver-center {
     0% {
         -webkit-transform: scaleY(0);

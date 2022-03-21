@@ -50,7 +50,7 @@ function displaySite() {
         loading.css("position", "absolute");
         loading.css("visibility", "hidden");
 
-        let menu_items = $('.menu_items').eq(0);
+        let menu_items = $('.menudiv').eq(0);
         menu_items.css("position", "static");
         menu_items.css("visibility", "visible");
 
@@ -174,10 +174,10 @@ function showOverlay() {
             overlay.style.visibility = 'visible';
             overlay.style.zIndex = '2';
         
-            let overlay_menu_links = document.getElementsByClassName('menu_items')[0].getElementsByTagName('a');
-        
+            let overlay_menu_links = $('#overlay .menu_items a');
+            overlay_menu_links.push($('#nftMobile')[0]);
             for (let i = 0; i < overlay_menu_links.length; i++) {
-                delay = (i / 7 + 0.5) + 's';
+                delay = (i / 8 + 0.5) + 's';
                 overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out " + delay + " both";
             }
         }, 125);
@@ -209,8 +209,8 @@ function hideOverlay() {
     overlay.style.zIndex = '-2';
     /* document.getElementsByClassName('menu_items')[0].classList.remove('slide-in-right-delay'); */
 
-    let overlay_menu_links = document.getElementsByClassName('menu_items')[0].getElementsByTagName('a');
-
+    let overlay_menu_links = $('#overlay .menu_items a');
+    overlay_menu_links.push($('#nftMobile')[0]);
     for (let i = 0; i < overlay_menu_links.length; i++) {
         overlay_menu_links[i].style.animation = "";
     }
@@ -265,10 +265,11 @@ function showOverlayMenu() {
         overlay.style.visibility = 'visible';
         overlay.style.zIndex = '2';
     
-        let overlay_menu_links = document.getElementsByClassName('menu_items')[0].getElementsByTagName('a');
-    
+        let overlay_menu_links =$('#overlay .menu_items a');
+        
+        overlay_menu_links.push($('#nftMobile')[0]);
         for (let i = 0; i < overlay_menu_links.length; i++) {
-            delay = (i / 7 + 0.5) + 's';
+            delay = (i / 8 + 0.5) + 's';
             overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out " + delay + " both";
         }
     }, 125);
@@ -284,8 +285,9 @@ function hideOverlayMenu() {
     overlay.style.zIndex = '-2';
     /* document.getElementsByClassName('menu_items')[0].classList.remove('slide-in-right-delay'); */
 
-    let overlay_menu_links = document.getElementsByClassName('menu_items')[0].getElementsByTagName('a');
-
+    let overlay_menu_links = $('#overlay .menu_items a');
+    
+    overlay_menu_links.push($('#nftMobile')[0]);
     for (let i = 0; i < overlay_menu_links.length; i++) {
         overlay_menu_links[i].style.animation = "";
     }

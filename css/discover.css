@@ -16,6 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    background-image: url("../content/backgrounds/index/KIKI2324.jpg");
 }
 
 .shadow{
@@ -50,6 +51,8 @@
     background: -o-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 35%, rgba(0,0,0,0) 100%);
     background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8) 35%, rgba(0,0,0,0) 100%);
 }
+
+
 
 .yachting .bg{
     background-image: url("../content/backgrounds/discover/yachting_bg.jpg");
@@ -115,6 +118,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+
 }
 
 .main{
@@ -257,11 +261,11 @@
 }
 
 .footer_about{
-    width: 100%;
+    width: 92%;
     display: flex;
     justify-content: flex-end;
     bottom: 15%;
-    right: 8%;
+    
     margin-bottom: 35px;
 }
 
@@ -283,8 +287,8 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
             align-items: center;
             /* align-items: flex-start; */
     margin-top: 20px;
@@ -302,8 +306,8 @@
 
 
 .logo_about{
-    height: 60%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
 }
 
 .text{
@@ -313,7 +317,7 @@
 .text p{
     font-family: 'Poppins';
     font-weight: 300;
-    font-size: 1.125em;
+    font-size: 1em;
     color: white;
     margin-top: 0px;
 }
@@ -647,8 +651,8 @@
     }
 
     .logo_about{
-        height: 40%;
-        width: 40%;
+        height: 30%;
+        width: 30%;
     }
 
     .desc_logo{
@@ -727,5 +731,10 @@
     .next_arrow{
         width: 45px;
         height: 10.125px;
+    }
+
+    .bg{
+        background-image: url("../content/backgrounds/index/KIKI2288.jpg");
+        filter: opacity(50%);
     }
 }

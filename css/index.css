@@ -60,11 +60,11 @@ body{
 
 .v_top{
     position: absolute;
-    top: 0;
+    top:0;
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0,0,0,1)), color-stop(40%, rgba(0,0,0,0.9)), to(rgba(0,0,0,0)));
-    background: -o-linear-gradient(top, rgba(0,0,0,1) 40%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(45%, rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
+    background: -o-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
 }
 
 .v_bot{
@@ -81,7 +81,7 @@ body{
 }
 
 .page_number{
-    width: 34%;
+    width: 31%;
     left: 0;
 }
 
@@ -89,7 +89,7 @@ body{
 .reserved{
     width: 200px;
     bottom: 10%;
-    left: 4%;
+    left: 2%;
     color: white;
     z-index: 10000;
     font-family: 'Poppins';
@@ -105,10 +105,19 @@ body{
     margin: 0;
     font-size: 14px;
 }
+.rr{
+    text-decoration: none;
+}
+
+.mobileice_room{
+    display: none;
+}
+
 .number{
     color: white;
-    font-size: 35px;
-    transform: rotate(-90deg);
+    font-size: 1.75rem;
+    text-orientation: sideways-right;
+    writing-mode: vertical-lr;
     font-family: 'Poppins';
     justify-content: start;
     width: 30%;
@@ -135,7 +144,7 @@ body{
 }
 
 .content{
-    width: 94.5%;
+    width: 97.5%;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -150,7 +159,6 @@ body{
     -webkit-box-align: center;
         -ms-flex-align: center;
     align-items: center;
-    left: -1%;
 }
 
 .main{
@@ -176,7 +184,7 @@ body{
 }
 
 .heading{
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     white-space: nowrap;
 }
 
@@ -399,7 +407,7 @@ body{
     cursor: pointer;
 }
 
-.scroll_gesture{
+/* .scroll_gesture{
     width: 3px;
     height: 35px;
     position: absolute;
@@ -407,10 +415,10 @@ body{
     margin-left: -1.5px;
     top: 95%;
     overflow: hidden;
-}
+} */
 
 
-.yachting .scroll_gesture{
+/* .yachting .scroll_gesture{
     -webkit-transform: translateY(50px);
         -ms-transform: translateY(50px);
             transform: translateY(50px);
@@ -425,29 +433,31 @@ body{
     position: absolute;
     -webkit-animation: scroll-gesture 2s infinite;
             animation: scroll-gesture 2s infinite;
-}
+} */
 
 /* trebalo bi da je okej ostaviti otkomentarisano: */
 .yachting .bg{
-    background-image: url("../content/backgrounds/index/HOME(DESKTOP).jpg");
-    filter: blur(2px) brightness(70%);
-    -webkit-filter: blur(2px) brightness(70%);
+    background-image: url("../content/backgrounds/index/KIKI2084.jpg");
+    filter:  brightness(70%);
+    -webkit-filter:  brightness(70%);
 }
 
 .travel .bg{
     background-image: url("../content/backgrounds/index/As Seen On(DESKTOP).png");
-    filter: blur(2px) brightness(70%);
-    -webkit-filter: blur(2px) brightness(70%);
+    filter:  brightness(70%);
+    -webkit-filter:  brightness(70%);
 
 }
 
 .entertainment .bg{
     background-image: url("../content/backgrounds/index/REFERENCES (DESKTOP).png");
 
-    filter: blur(2px) brightness(40%);
-    -webkit-filter: blur(2px) brightness(40%);
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%);
 
 }
+
+
 
 @media (pointer:coarse) {
     .main_btn button{
@@ -614,20 +624,28 @@ body{
 
     .yachting .bg{
         background-position: 50% 0%;
-        background-image: url("../content/backgrounds/index/HOME(MOBILE).jpg");
+        background-image: url("../content/backgrounds/index/KIKI2084.jpg");
     }
 
     .travel .bg{
-        background-position: 15% 0%;
+        background-position: 0% 0%;
         background-image: url("../content/backgrounds/index/AS SEEN ON (HOME).png");
-        filter: blur(3px) brightness(70%);
-        -webkit-filter: blur(3px) brightness(70%);
+        filter:  brightness(70%);
+        -webkit-filter:  brightness(70%);
     }
 
     .entertainment .bg{
         background-position: 35% 0%;
         background-image: url("../content/backgrounds/index/REFERENCES\ \(MOBILE\).png");
         
+    }
+
+    .ice_room{
+        display: none;
+    }
+
+    .mobileice_room{
+        display: block;
     }
 
     .potpis{
@@ -656,7 +674,8 @@ body{
 
     .number{
         font-size: 24px;
-        width: 70%;
+        width: 1.95rem;
+        height: 6rem;
         padding-bottom: 30%;
         margin-right: 60%;
     }
@@ -666,8 +685,9 @@ body{
         position: absolute;
         top: unset;
         bottom: unset;
-        bottom: 45px;
-        height: 60px;
+        bottom: 0px;
+        height: 86px;
+        left: 0% !important;
     }
 
     .select_indicator{
@@ -715,8 +735,8 @@ body{
 
 @media (max-width: 425px) and (min-height: 600px) {
     .main{
-        top: 5%;
-        left: 5%;
+        top: 17%;
+        left: 0%;
     }
 }
 
