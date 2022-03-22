@@ -220,11 +220,10 @@ function showOverlay() {
             overlay.css('visibility', 'visible');
     
             let overlay_menu_links = $('#overlay .menu_items a');
-            overlay_menu_links.push($('#nftMobile')[0]);
             overlay_menu_links.css('transform', 'translateX(0)');
             overlay_menu_links.css('opacity', '1');
             for (let i = 0; i < overlay_menu_links.length; i++) {
-                delay = (i / 8 + 0.5) + 's';
+                delay = (i / 7 + 0.5) + 's';
                 overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out " + delay + " both";
             }
         }, 125);
@@ -264,7 +263,6 @@ function hideOverlay() {
     overlay.css('z-index', '-1');
 
     let overlay_menu_links = $('#overlay .menu_items a');
-    overlay_menu_links.push($('#nftMobile')[0]);
     for (let i = 0; i < overlay_menu_links.length; i++) {
         overlay_menu_links.eq(i)[0].style.animation = "";
     }
