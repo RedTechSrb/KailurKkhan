@@ -102,15 +102,29 @@ function displaySite() {
     }
 }
 
-// function addEventListeners() {
-//     let menu = $('.menu').eq(0);
-//     menu.on('click', menuClicked);
+function addEventListeners() {
+    let menu = $('.menu').eq(0);
+    menu.on('click', menuClicked);
 
-//     let nav_links = $('.nav_item span');
-//     for (let i = 0; i < nav_links.length; i++) {
-//         nav_links.eq(i).on('click', navLinkClicked);
-//     }
-// }
+    menu.on('mouseenter', function() {
+        if (!menu[0].classList.contains('open')) {
+            let lines = $('.menu div');
+            for (let i = 0; i < lines.length; i++) {
+                lines.eq(i).css('transition-delay', i * 0.125 + 's');
+                lines.eq(i).css('transform', 'translateX(-70px)');
+            }
+        }
+    });
+    menu.on('mouseleave', function() {
+        if (!menu[0].classList.contains('open')) {
+            let lines = $('.menu div');
+            for (let i = 0; i < lines.length; i++) {
+                lines.eq(i).css('transition-delay', i * 0.125 + 's');
+                lines.eq(i).css('transform', 'translateX(0)');
+            }
+        }
+    });
+}
 
 function showContentInitial() {
     let header = $('.header');
@@ -174,26 +188,13 @@ function showOverlay() {
         let arrow = $('.menu img');
         arrow.eq(0).css('transform', 'translate(0, 0)');
 
-        // let logo = $('#logo');
-        // logo.css('visibility', 'hidden');
+        let logo = $('#logo');
+        logo.css('visibility', 'hidden');
 
         // show overlay
         let overlay = $('#overlay');
         overlay.css('transform', 'translateX(0)');
 
-        /* animate menu */
-        // menu = $('.menu').eq(0);
-        // menu[0].classList.add('open');
-        // menu.off("click", menuClicked);
-        // setTimeout(function(){ menu.on("click", menuClicked); }, 1500);
-        // let menu_mid = $('.menu_mid').eq(0);
-        // menu_mid[0].classList.add('transitionable');
-        // setTimeout(function() { menu_mid[0].classList.remove('transitionable'); }, 250);
-
-        /* hide content */
-        // let nav = $('nav').eq(i);
-        // removeAnimations(nav[0]);
-        // nav[0].classList.add("slide-nav-out-overlay");
 
         let main = $('.main').eq(i);
         removeAnimations(main[0]);
@@ -205,7 +206,7 @@ function showOverlay() {
         
         // let scroll_gesture = $('.scroll_gesture').eq(i);
         // removeAnimations(scroll_gesture[0]);
-        // scroll_gesture[0].classList.add("slide-gesture-out-overlay");
+        // scroll_gesture[0].classList.add("slide-out-top-scroll");
 
         $('.header').css('visibility', 'hidden');
         menu.css('visibility', 'visible');
@@ -234,15 +235,6 @@ function showOverlay() {
     } 
 }
 
-function addEventListeners() {
-    let menu = $('.menu').eq(0);
-    menu.on('click', menuClicked);
-
-    let nav_links = $('.nav_item span');
-    for (let i = 0; i < nav_links.length; i++) {
-        nav_links.eq(i).on('click', navLinkClicked);
-    }
-}
 
 function hideOverlay() {
     let sections = $('.section');
@@ -251,15 +243,21 @@ function hideOverlay() {
         if (sections.eq(i)[0].classList.contains("active")) break;
     }
 
-    /* animate menu */
+    // animate menu
     let menu = $('.menu').eq(0);
     menu[0].classList.remove('open');
-    menu.css('visibility', 'visible');
-    menu.off( "click", menuClicked);
-    setTimeout(function(){ menu.on('click', menuClicked); }, 500);
-    let menu_mid = $('.menu_mid').eq(0);
-    menu_mid[0].classList.add('transitionable');
-    setTimeout(function() { menu_mid[0].classList.remove('transitionable'); }, 250);
+
+    let lines = $('.menu div');
+    for (let i = 0; i < lines.length; i++) {
+        lines.eq(i).css('transition-delay', i * 0.125 + 's');
+        lines.eq(i).css('transform', 'translate(0, 0)');
+    }
+
+    let arrow = $('.menu img');
+    arrow.eq(0).css('transform', 'translate(0, -50px)');
+    
+    let logo = $('#logo');
+    logo.css('visibility', 'visible');
 
     /* hide overlay */
     let overlay = $('#overlay');
@@ -288,9 +286,9 @@ function hideOverlay() {
     removeAnimations(contact[0]);
     contact[0].classList.add("slide-contact-in-overlay");
 
-    let scroll_gesture = $('.scroll_gesture').eq(i);
-    removeAnimations(scroll_gesture[0]);
-    scroll_gesture[0].classList.add("slide-gesture-in-overlay");
+    // let scroll_gesture = $('.scroll_gesture').eq(i);
+    // removeAnimations(scroll_gesture[0]);
+    // scroll_gesture[0].classList.add("slide-in-top-scroll");
 
     /* allow scrolling */
     fullpage_api.setAllowScrolling(true, 'down');

@@ -1,25 +1,57 @@
 document.addEventListener("DOMContentLoaded", function() {
+    if (!sessionStorage.getItem('upcoming_events-loaded')) {
+        $('.loading').eq(0).css("visibility", "visible");
+        loadImages();
+        setTimeout(function() {
+            if (can_display) showContentLoad();
+        }, 1500);
+        setTimeout(showContentLoad, 5000);
+    }
+    else {
+        loadImages();
+        showContentLoad();
+    }
     addEventListeners();
-    showContentLoad(); 
+    
 });
 
-/* $(function () {
-    setTimeout(function() {
-        document.getElementsByTagName("html")[0].style.visibility = "visible";
-        addEventListeners();
-        showContentLoad();
-    }, 300); 
-}) */
-
+var can_display = false;
 const TRANSITION_DURATION_SECONDS = 0.125;
 
 // lista svih animacija koje se koriste (potrebna da bi se znalo sta sve treba purge-ovati)
 const animationList = [
 'slide-basic_info-in-initial', 'scale-line-in-vert', 'slide-desc-in-initial', 'slide-basic_info-out-overlay', 'slide-desc-out-overlay', 'slide-line-out-overlay', 'slide-basic_info-in-overlay', 'slide-line-in-overlay', 'slide-desc-in-overlay'];
 
+function loadImages() {
+    $('<img/>').attr('src', '../content/KIKI2324.jpg').on('load', function() {
+        $(this).remove();
+        loadedCount++;
+        if (loadedCount == 1) can_display = true;
+    });
+}
+
 function addEventListeners() {
-    let menu = document.getElementsByClassName('menu')[0];
-    menu.addEventListener("click", menuClicked, false);
+    let menu = $('.menu').eq(0);
+    menu.on('click', menuClicked);
+
+    menu.on('mouseenter', function() {
+        if (!menu[0].classList.contains('open')) {
+            let lines = $('.menu div');
+            for (let i = 0; i < lines.length; i++) {
+                lines.eq(i).css('transition-delay', i * 0.125 + 's');
+                lines.eq(i).css('transform', 'translateX(-70px)');
+            }
+        }
+    });
+    menu.on('mouseleave', function() {
+        if (!menu[0].classList.contains('open')) {
+            let lines = $('.menu div');
+            for (let i = 0; i < lines.length; i++) {
+                lines.eq(i).css('transition-delay', i * 0.125 + 's');
+                lines.eq(i).css('transform', 'translateX(0)');
+            }
+        }
+    });
 }
 
 // fade-in content-a pri load-ovanju stranice

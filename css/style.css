@@ -438,6 +438,11 @@ body{
             -ms-transform: rotate(-45deg) translate(35px, 35px);
                 transform: rotate(-45deg) translate(35px, 35px);
     }
+
+    .scroll_gesture::before{
+        height: 80px;
+        animation: scroll-gesture-mobile 2s infinite;
+    }
 }
 
 @Media (max-width: 600px) {
@@ -538,8 +543,8 @@ body{
     }
 
     .menu{
-        width: 36.2px;
-        height: 30px;
+        width: 29.2px;
+        height: 21px;
     }
 
     .menu_items{
@@ -622,6 +627,11 @@ body{
         -webkit-transform: rotate(-45deg) translate(35px, 35px);
             -ms-transform: rotate(-45deg) translate(35px, 35px);
                 transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    .scroll_gesture::before{
+        height: 80px;
+        animation: scroll-gesture-mobile 2s infinite;
     }
 }
 

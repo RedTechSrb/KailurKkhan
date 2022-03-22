@@ -38,7 +38,7 @@ const IMAGE_HOVER_SECONDS = 0.25;
 // lista svih animacija koje se koriste (potrebna da bi se znalo koje animacije treba ukloniti)
 const animationList = ["slide-image-in-initial", "slide-desc-in-initial", "slide-image-in-scroll", "slide-desc-in-scroll", "show-header", "slide-image-out-overlay",
 "slide-image-in-overlay", "slide-desc-out-overlay", "slide-desc-in-overlay", "slide-image-out-scroll", "slide-desc-out-scroll", "slide-image-in-scroll", "slide-desc-in-scroll",
-"slide-gesture-out-scroll", "slide-gesture-in-scroll"]
+"slide-gesture-out-scroll", "slide-gesture-in-scroll", 'slide-in-top-scroll', 'slide-out-top-scroll']
 
 function loadImages() {
     $('<img/>').attr('src', '../content/REFERENCES/2bonabontoni.png').on('load', function() {
@@ -149,18 +149,27 @@ function loadImages() {
     }
     
     function addEventListeners() {
-        let menu = document.getElementsByClassName('menu')[0];
-        menu.addEventListener("click", menuClicked, false);
-        let images = $('.image');
-    
-        for (let i = 0; i < images.length; i++) {
-            images.eq(i).on('mouseenter', function() {
-                imageEntered(i);
-            });
-            images.eq(i).on('mouseleave', function() {
-                imageLeft(i);
-            });
-        }
+        let menu = $('.menu').eq(0);
+        menu.on('click', menuClicked);
+
+        menu.on('mouseenter', function() {
+            if (!menu[0].classList.contains('open')) {
+                let lines = $('.menu div');
+                for (let i = 0; i < lines.length; i++) {
+                    lines.eq(i).css('transition-delay', i * 0.125 + 's');
+                    lines.eq(i).css('transform', 'translateX(-70px)');
+                }
+            }
+        });
+        menu.on('mouseleave', function() {
+            if (!menu[0].classList.contains('open')) {
+                let lines = $('.menu div');
+                for (let i = 0; i < lines.length; i++) {
+                    lines.eq(i).css('transition-delay', i * 0.125 + 's');
+                    lines.eq(i).css('transform', 'translateX(0)');
+                }
+            }
+        });
     }
     
     function showContentInitial() {
@@ -175,6 +184,9 @@ function loadImages() {
     
         let desc = $('.desc').eq(0);
         desc[0].classList.add("slide-desc-in-scroll");
+
+        let scroll_gesture = $('.scroll_gesture');
+        scroll_gesture[0].classList.add("slide-in-top-scroll");
     }
     
     function imageEntered(index) {
@@ -258,10 +270,7 @@ function loadImages() {
             let desc = $('.desc').eq(i);
             removeAnimations(desc[0]);
             desc[0].classList.add("slide-desc-out-overlay");
-            
-            let scroll_gesture = $('.scroll_gesture').eq(i);
-            removeAnimations(scroll_gesture[0]);
-            scroll_gesture[0].classList.add("slide-gesture-out-overlay");    
+        
     
             /* show overlay */
             setTimeout(function() {
@@ -332,10 +341,6 @@ function loadImages() {
         let desc = $('.desc').eq(i);
         removeAnimations(desc[0]);
         desc[0].classList.add("slide-desc-in-overlay");
-        
-        let scroll_gesture = $('.scroll_gesture').eq(i);
-        removeAnimations(scroll_gesture[0]);
-        scroll_gesture[0].classList.add("slide-gesture-in-overlay"); 
     }
     
     // fade-out content-a pri prikazivanju overlay menija
@@ -359,10 +364,7 @@ function loadImages() {
         let desc = $('.desc').eq(i);
         removeAnimations(main[0]);
         desc[0].classList.add("slide-desc-out-overlay");
-        
-        let scroll_gesture = $('.scroll_gesture').eq(i);
-        removeAnimations(scroll_gesture[0]);
-        scroll_gesture[0].classList.add("slide-gesture-out-overlay");    
+         
     }
     
     // prikazivanje overlay menija
@@ -424,10 +426,6 @@ function loadImages() {
         let desc = $('.desc').eq(i);
         removeAnimations(main[0]);
         desc[0].classList.add("slide-desc-in-overlay");
-        
-        let scroll_gesture = $('.scroll_gesture').eq(i);
-        removeAnimations(scroll_gesture[0]);
-        scroll_gesture[0].classList.add("slide-gesture-in-overlay"); 
     }
     
     // skidanje svih animacija sa elementa radi ponovnog startovanja
@@ -460,13 +458,14 @@ function loadImages() {
             removeAnimations(desc.eq(origin.index)[0]);
             desc.eq(origin.index)[0].classList.add("slide-desc-out-scroll");
     
-            let scroll_gesture = $('.scroll_gesture');
-            removeAnimations(scroll_gesture.eq(origin.index)[0]);
-            scroll_gesture.eq(origin.index)[0].classList.add("slide-gesture-out-scroll");
+            
+            let scroll_gestures = $('.scroll_gesture');
+            removeAnimations(scroll_gestures.eq(origin.index)[0]);
+            scroll_gestures.eq(origin.index)[0].classList.add("slide-out-top-scroll");
     
             /* animate entered section */
-            removeAnimations(scroll_gesture.eq(destination.index)[0]);
-            scroll_gesture.eq(destination.index)[0].classList.add("slide-gesture-in-scroll");
+            removeAnimations(scroll_gestures.eq(destination.index)[0]);
+            scroll_gestures.eq(destination.index)[0].classList.add("slide-in-top-scroll");
             
             removeAnimations(desc.eq(destination.index)[0]);
             desc.eq(destination.index)[0].classList.add("slide-desc-in-scroll");
