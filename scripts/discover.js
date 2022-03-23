@@ -1,21 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
-    if (!sessionStorage.getItem('upcoming_events-loaded')) {
+
+$(function () {
+    // show loading screen while content loads
+    if (!sessionStorage.getItem('discover-loaded')) {
         $('.loading').eq(0).css("visibility", "visible");
         loadImages();
         setTimeout(function() {
-            if (can_display) showContentLoad();
-        }, 1500);
-        setTimeout(showContentLoad, 5000);
+            if (can_display) displaySite();
+        }, 3000);
+        setTimeout(displaySite, 5000);
     }
     else {
         loadImages();
-        showContentLoad();
+        setTimeout(displaySite, 200);
     }
+
     addEventListeners();
-    
 });
 
-var can_display = false;
+// document.addEventListener("DOMContentLoaded", function() {
+//     if (!sessionStorage.getItem('upcoming_events-loaded')) {
+//         $('.loading').eq(0).css("visibility", "visible");
+//         loadImages();
+//         setTimeout(function() {
+//             if (can_display) showContentLoad();
+//         }, 1500);
+//         setTimeout(showContentLoad, 5000);
+//     }
+//     else {
+//         loadImages();
+//         showContentLoad();
+//     }
+//     addEventListeners();
+    
+// });
+
+var loadedCount = 0; // number of resources currently loaded
+var displayed = false; // content already displayed
+var can_display = false; // can display content
+const TO_LOAD_COUNT = 10; // number of resources to load
+const SCROLL_SPEED_SECONDS = 1; // fullpage scroll speed
 const TRANSITION_DURATION_SECONDS = 0.125;
 
 // lista svih animacija koje se koriste (potrebna da bi se znalo sta sve treba purge-ovati)
@@ -23,7 +46,7 @@ const animationList = [
 'slide-basic_info-in-initial', 'scale-line-in-vert', 'slide-desc-in-initial', 'slide-basic_info-out-overlay', 'slide-desc-out-overlay', 'slide-line-out-overlay', 'slide-basic_info-in-overlay', 'slide-line-in-overlay', 'slide-desc-in-overlay'];
 
 function loadImages() {
-    $('<img/>').attr('src', '../content/KIKI2324.jpg').on('load', function() {
+    $('<img/>').attr('src', '../content/backgrounds/index/KIKI2324.jpg').on('load', function() {
         $(this).remove();
         loadedCount++;
         if (loadedCount == 1) can_display = true;
@@ -52,6 +75,25 @@ function addEventListeners() {
             }
         }
     });
+}
+
+function displaySite() {
+    if (!displayed) {
+        let overlay = $('#overlay');
+        overlay.css("justify-content", "flex-start");
+        overlay.css("transform", "translateX(-100vw)");
+        setTimeout(function() { overlay.css("transition", "transform 0.125s"); }, 125);
+        
+        let loading = $('.loading').eq(0);
+        loading.css("position", "absolute");
+        loading.css("visibility", "hidden");
+
+        $('.header').css('visibility', 'visible');
+
+        sessionStorage.setItem('discover-loaded', true);
+        showContentLoad();
+        displayed = true;
+    }
 }
 
 // fade-in content-a pri load-ovanju stranice

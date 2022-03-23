@@ -293,6 +293,10 @@ body{
     height: 20px;
 }
 
+.contact a:hover{
+    opacity: 0.5;
+}
+
 .contact a img{
     width: 100%;
     height: 100%;
@@ -475,10 +479,6 @@ body{
         margin-top: -30px;
     }
 
-    .number{
-        width: 40%;
-        padding-bottom: 20px;
-    }
 }
 
 @media (max-width: 1400px) {
@@ -545,7 +545,7 @@ body{
     .main{
         width: 100%;
         position: absolute;
-        top: 5%;
+        top: 6%;
     }
 
     .text{
@@ -614,6 +614,22 @@ body{
 
     .scroll_gesture{
         bottom: 3%;
+    }
+
+    .page_number{
+        margin-top: 85%;
+    }
+
+    .potpis{
+        display: none;
+    }
+
+    .ice_room{
+        display: none;
+    }
+
+    .mobileice_room{
+        display: block;
     }
 }   
 

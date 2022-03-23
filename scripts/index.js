@@ -18,7 +18,7 @@ $(function () {
 var loadedCount = 0;
 var displayed = false;
 var can_display = false;
-const TO_LOAD_COUNT = 6;
+const TO_LOAD_COUNT = 3;
 const SCROLL_SPEED_SECONDS = 1;
 
 // lista svih animacija koje se koriste (potrebna da bi se znalo koje animacije treba ukloniti)
@@ -55,6 +55,7 @@ function loadImages() {
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
+
     }
     else{
         $('<img/>').attr('src', '../content/backgrounds/index/HOME(DESKTOP).jpg').on('load', function() {

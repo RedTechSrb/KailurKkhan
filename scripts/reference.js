@@ -170,6 +170,17 @@ function loadImages() {
                 }
             }
         });
+
+        let images = $('.image');
+
+        for (let i = 0; i < images.length; i++) {
+            images.eq(i).on('mouseenter', function() {
+                imageEntered(i);
+            });
+            images.eq(i).on('mouseleave', function() {
+                imageLeft(i);
+            });
+        }
     }
     
     function showContentInitial() {
@@ -192,17 +203,12 @@ function loadImages() {
     function imageEntered(index) {
         let hover = $('.hover').eq(index);
         let add = $('.hover .add').eq(index);
-        let g_calendar = $('.hover .g_calendar').eq(index);
     
         hover.css("background", "rgba(0, 0, 0, 0.37)");
         hover.css("transition", "background 0.5s");
     
         add.css("opacity", "1");
         add.css("transition", "opacity 0.5s");
-    
-        g_calendar.css("opacity", "1");
-        g_calendar.css("transform", "scale(1)");
-        g_calendar.css("transition", "transform 0.5s, opacity 0.5s");
         
     }
     

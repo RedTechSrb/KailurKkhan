@@ -106,7 +106,8 @@
 
 .content{
     max-width: 100%;
-    min-height: 75vh;
+    min-height: 70vh;
+    margin-top: 4rem;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -124,7 +125,8 @@
 .main{
     position: relative;
     width: 92%;
-    /* margin-left: 8%; */
+    margin-top: 200px;
+    margin-bottom: 4rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -264,14 +266,10 @@
     width: 92%;
     display: flex;
     justify-content: flex-end;
-    bottom: 15%;
-    
-    margin-bottom: 35px;
+    margin-bottom: 150px;
 }
 
 .potpis_about{
-    padding: 0 35px;
-    border-bottom: 1px solid white;
     left: 20%;
 }
 
@@ -510,7 +508,6 @@
 @media (max-width: 900px) {
     .content{
         min-height: 87vh;
-        margin-top: 3em;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
@@ -529,7 +526,7 @@
     }
 
     .text p{
-        font-size: 0.9375em;
+        font-size: 0.8375em;
     }
 
     .main{
@@ -661,8 +658,8 @@
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: center;
-        margin-top: -100px;
         margin-bottom: 10px;
+        margin-right: 1rem;
     }
 
     .heading h1{
@@ -672,7 +669,6 @@
 
     .text{
         width: 100% !important;
-        margin-bottom: 30px;
         text-align: center;
     }
 
@@ -726,6 +722,10 @@
 @media (max-width: 425px) {
     .main{
         margin-left: 1em;
+    }
+
+    .potpis_about{
+        margin-right: 0;
     }
 
     .next_arrow{
