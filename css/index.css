@@ -52,29 +52,7 @@ body{
             transform: scale(1);
 }
 
-.vignette{
-    visibility: hidden;
-    width: 100%;
-    height: 25%;
-}
 
-.v_top{
-    position: absolute;
-    top:0;
-    left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(45%, rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
-    background: -o-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
-}
-
-.v_bot{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), color-stop(45%, rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
-    background: -o-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
-}
 
 .header{
     z-index: 10;
@@ -93,6 +71,7 @@ body{
     color: white;
     z-index: 10000;
     font-family: 'Poppins';
+    visibility: hidden;
 }
 
 .reserved p{
@@ -144,7 +123,7 @@ body{
 }
 
 .content{
-    width: 97.5%;
+    width: 97%;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -286,6 +265,7 @@ body{
     -webkit-box-align: flex-end;
         -ms-flex-align: flex-end;
             align-items: flex-end;
+            margin-bottom: 3rem;
 }
 
 .contact a{
@@ -410,34 +390,6 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
-
-/* .scroll_gesture{
-    width: 3px;
-    height: 35px;
-    position: absolute;
-    left: 50%;
-    margin-left: -1.5px;
-    top: 95%;
-    overflow: hidden;
-} */
-
-
-/* .yachting .scroll_gesture{
-    -webkit-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-}
-
-.scroll_gesture::before{
-    content: '';
-    width: 3px;
-    height: 35px;
-    background-color: white;
-    position: absolute;
-    -webkit-animation: scroll-gesture 2s infinite;
-            animation: scroll-gesture 2s infinite;
-} */
 
 /* trebalo bi da je okej ostaviti otkomentarisano: */
 .yachting .bg{
@@ -644,7 +596,7 @@ body{
     }
 
     .travel .bg{
-        background-position: 0% 0%;
+        background-position: 8% 0%;
         background-image: url("../content/backgrounds/index/AS SEEN ON (HOME).png");
         filter:  brightness(70%);
         -webkit-filter:  brightness(70%);

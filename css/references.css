@@ -143,19 +143,14 @@
     -webkit-filter: blur(6px) brightness(60%);
 }
 
-.vignette{
-    visibility: hidden;
-    width: 100%;
-    height: 25%;
-}
 
-.v_top{
+/* .v_top{
     position: absolute;
     top: 0;
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0,0,0,1)), color-stop(40%, rgba(0,0,0,0.9)), to(rgba(0,0,0,0)));
-    background: -o-linear-gradient(top, rgba(0,0,0,1) 40%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(40%, rgba(0,0,0,0.9)), to(rgba(0,0,0,0)));
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0) 100%);
 }
 
 .v_bot{
@@ -165,7 +160,7 @@
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), color-stop(45%, rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
     background: -o-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
     background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8) 45%, rgba(0,0,0,0) 100%);
-}
+} */
 
 .content{
     width: 85.4%;
@@ -214,6 +209,7 @@
     z-index: 10000;
     width: 100px;
     margin-top: 280px;
+    visibility: hidden;
 }
 
 .image_name h1{
@@ -747,7 +743,7 @@
         width: 77%;
         min-height: 80vh;
         height: 80vh;
-        top: 20px;
+        top: 60px;
         position: absolute;
         bottom: 3%;
         /* margin-left: 5%; */

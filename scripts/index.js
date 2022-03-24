@@ -3,6 +3,7 @@ $(function () {
     if (!sessionStorage.getItem('index-loaded')) {
         $('.loading').eq(0).css("visibility", "visible");
         loadImages();
+        $('.load_bar').eq(0).css("width", "75%");
         setTimeout(function() {
             if (can_display) displaySite();
         }, 1500);
@@ -96,6 +97,11 @@ function displaySite() {
         let menu_items = $('.menudiv').eq(0);
         menu_items.css("position", "static");
         menu_items.css("visibility", "visible");
+
+        $(".footer").css("visibility", "visible");
+        $(".reserved").css("visibility", "visible");
+
+        $('.load_bar').eq(0).css("width", "100%");
 
         sessionStorage.setItem('index-loaded', true);
         showContentInitial();
@@ -225,7 +231,7 @@ function showOverlay() {
             overlay_menu_links.css('opacity', '1');
             for (let i = 0; i < overlay_menu_links.length; i++) {
                 delay = (i / 7 + 0.5) + 's';
-                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out " + delay + " both";
+                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
             }
         }, 125);
 

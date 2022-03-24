@@ -2,12 +2,12 @@ $(function () {
     // show loading screen while content loads
     if (!sessionStorage.getItem('discover-loaded')) {
         $('.loading').eq(0).css("visibility", "visible");
-        $('.wrapper').eq(0).css("visibility", "hidden");
         loadImages();
+        $('.load_bar').eq(0).css("width", "75%");
         setTimeout(function() {
             if (can_display) displaySite();
-        }, 3000);
-        setTimeout(displaySite, 5000);
+        }, 1500);
+        setTimeout(displaySite, 3000);
     }
     else {
         loadImages();
@@ -30,7 +30,8 @@ function isMobile() {
 
 // all animations used
 const animationList = ['slide-out-top-scroll', 'slide-in-top-scroll', 'scale-in-vertically-initial', 'slide-in-right-initial', 'slide-out-right-initial',
-'slide-out-left-overlay', 'slide-in-left-overlay', 'appear-initial', 'disappear-overlay', 'appear-overlay', "slide-basic_info-in-initial", 'slide-desc-in-initial'];
+'slide-out-left-overlay', 'slide-in-left-overlay', 'appear-initial', 'disappear-overlay', 'appear-overlay', "slide-basic_info-in-initial", 'slide-desc-in-initial',
+"slide-in-bottom-scroll"];
 
 function loadImages() {
     if(isMobile()){
@@ -53,7 +54,6 @@ function loadImages() {
 
 function displaySite() {
     if (!displayed) {
-        $('.wrapper').eq(0).css("visibility", "visible");
         let overlay = $('#overlay');
         overlay.css("justify-content", "flex-start");
         overlay.css("transform", "translateX(-100vw)");
@@ -61,10 +61,13 @@ function displaySite() {
         
         let loading = $('.loading').eq(0);
         loading.css("position", "absolute");
-        // loading.css("visibility", "hidden");
+        loading.css("visibility", "hidden");
         // $('.load_bar').eq(0).css('width', '100%');
 
         $('.header').css('visibility', 'visible');
+        $('.wrapper').eq(0).css("visibility", "visible");
+
+        $('.load_bar').eq(0).css("width", "100%");
 
         sessionStorage.setItem('discover-loaded', true);
         showContentInitial();
@@ -102,11 +105,15 @@ function showContentInitial() {
 
     let logo = $('.desc_logo');
     removeAnimations(logo[0]);
-    logo[0].classList.add('slide-basic_info-in-initial');
+    logo[0].classList.add('slide-in-bottom-scroll');
 
     let desc = $('.desc');
     removeAnimations(desc[0]);
-    desc[0].classList.add('slide-desc-in-initial');
+    desc[0].classList.add('slide-in-bottom-scroll');
+
+    let f = $('.footer_about');
+    removeAnimations(f[0]);
+    f[0].classList.add('slide-in-bottom-scroll');
 }
 
 function menuClicked() {
@@ -162,7 +169,7 @@ function showOverlay() {
             overlay_menu_links.css('opacity', '1');
             for (let i = 0; i < overlay_menu_links.length; i++) {
                 delay = (i / 7 + 0.5) + 's';
-                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out " + delay + " both";
+                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
             }
         }, 125);
 }

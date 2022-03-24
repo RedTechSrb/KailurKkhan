@@ -39,8 +39,8 @@
     top: 0;
     left: 0;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(35%, rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
-    background: -o-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.8) 35%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 35%, rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
 }
 
 .v_bot{
@@ -52,49 +52,8 @@
     background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8) 35%, rgba(0,0,0,0) 100%);
 }
 
-
-
-.yachting .bg{
-    background-image: url("../content/backgrounds/discover/yachting_bg.jpg");
-}
-
-.travel .bg{
-    background-image: url("../content/backgrounds/discover/travel_bg.jpg");
-}
-
-.entertainment .bg{
-    background-image: url("../content/REFERENCES/bergerm_background.JPG");
-    background-position: top left;
-    /* filter: blur(3px) brightness(70%);
-    -webkit-filter: blur(3px) brightness(70%); */
-}
-
-.sports .bg{
-    background-image: url("../content/backgrounds/discover/sport_bg.jpg");
-}
-
-.transport .bg{ 
-    background-image: url("../content/backgrounds/discover/transport_bg.jpg");
-}
-
-.celebrations .bg{
-    background-image: url("../content/backgrounds/discover/celebrations_bg.jpg");
-}
-
-.luxury_items .bg{
-    background-image: url("../content/backgrounds/discover/luxury_items_bg.jpg");;
-}
-
-.wellness .bg{
-    background-image: url("../content/backgrounds/discover/wellness_bg.jpg");
-}
-
-.events .bg{
-    background-image: url("../content/backgrounds/discover/events_bg.jpg");
-}
-
-.networking .bg{
-    background-image: url("../content/backgrounds/discover/networking_bg.jpg");
+.wrapper{
+    visibility: hidden;
 }
 
 .bg img{
@@ -271,6 +230,7 @@
 
 .potpis_about{
     left: 20%;
+    margin-right: 5.5rem;
 }
 
 .desc_logo{
@@ -527,6 +487,10 @@
 
     .text p{
         font-size: 0.8375em;
+    }
+
+    .potpis_about{
+        margin-right: 0;
     }
 
     .main{
