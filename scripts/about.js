@@ -64,6 +64,10 @@ function displaySite() {
         loading.css("visibility", "hidden");
         // $('.load_bar').eq(0).css('width', '100%');
 
+        let menu_items = $('.menudiv').eq(0);
+        menu_items.css("position", "static");
+        menu_items.css("visibility", "visible");
+
         $('.header').css('visibility', 'visible');
         $('.wrapper').eq(0).css("visibility", "visible");
 

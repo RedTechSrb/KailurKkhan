@@ -483,10 +483,12 @@ body{
     }
     .icons_trade{
         padding-top: 3rem;
-        padding-bottom: 5rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 0rem;
     }
     .menu_items{
-        padding-bottom: 4rem;
+        padding-bottom: 1rem;
     }
 }
 
