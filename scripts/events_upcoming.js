@@ -3,7 +3,12 @@ $(function () {
     if (!sessionStorage.getItem('upcoming_events-loaded')) {
         $('.loading').eq(0).css("visibility", "visible");
         loadImages();
-        $('.load_bar').eq(0).css("width", "75%");
+        if(isMobile()){
+            $('.load_bar').eq(0).css("width", "75%");
+        }
+        else{
+            $('.load_bar').eq(0).css("width", "100%");
+        }
         setTimeout(function() {
             if (can_display) displaySite();
         }, 1500);
