@@ -285,20 +285,17 @@ function loadImages() {
             desc[0].classList.add("slide-desc-out-overlay");
         
     
-            /* show overlay */
-            setTimeout(function() {
-                let overlay = $('#overlay');
-                overlay.css('z-index', '1');
-                overlay.css('visibility', 'visible');
-        
-                let overlay_menu_links = $('#overlay .menu_items a');
-                overlay_menu_links.css('transform', 'translateX(0)');
-                overlay_menu_links.css('opacity', '1');
-                for (let i = 0; i < overlay_menu_links.length; i++) {
-                    delay = (i / 7 + 0.5) + 's';
-                    overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
-                }
-            }, 125);
+            let overlay = $("#overlay");
+            overlay.css('z-index', '1');
+            overlay.css('visibility', 'visible');
+    
+            let overlay_menu_links = $('#overlay .menu_items a');
+            overlay_menu_links.css('transform', 'translateX(0)');
+            overlay_menu_links.css('opacity', '1');
+            for (let i = 0; i < overlay_menu_links.length; i++) {
+                delay = (i / 7 + 0.5) + 's';
+                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
+            }
         
             fullpage_api.setAllowScrolling(false, 'down');
             fullpage_api.setAllowScrolling(false, 'up');
@@ -379,42 +376,6 @@ function loadImages() {
         removeAnimations(main[0]);
         desc[0].classList.add("slide-desc-out-overlay");
          
-    }
-    
-    // prikazivanje overlay menija
-    function showOverlayMenu() {
-        setTimeout(function() {
-            let overlay = document.getElementById('overlay');
-            overlay.style.visibility = 'visible';
-            overlay.style.zIndex = '2';
-        
-            let overlay_menu_links =$('#overlay .menu_items a');
-        
-            for (let i = 0; i < overlay_menu_links.length; i++) {
-                delay = (i / 7 + 0.5) + 's';
-                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out " + delay + " both";
-            }
-        }, 125);
-    
-        fullpage_api.setAllowScrolling(false, 'down');
-        fullpage_api.setAllowScrolling(false, 'up');
-    }
-    
-    // sakrivanje overlay menija
-    function hideOverlayMenu() {
-        let overlay = document.getElementById('overlay');
-        overlay.style.visibility = 'hidden';
-        overlay.style.zIndex = '-2';
-        /* document.getElementsByClassName('menu_items')[0].classList.remove('slide-in-right-delay'); */
-    
-        let overlay_menu_links =$('#overlay .menu_items a');
-    
-        for (let i = 0; i < overlay_menu_links.length; i++) {
-            overlay_menu_links[i].style.animation = "";
-        }
-    
-        fullpage_api.setAllowScrolling(true, 'down');
-        fullpage_api.setAllowScrolling(true, 'up');
     }
     
     // fade-in content-a posle gasenja overlay menija

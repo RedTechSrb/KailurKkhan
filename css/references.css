@@ -338,7 +338,7 @@
 }
 
 .reference11 .image{
-    background: url("../content/REFERENCES/Djekson.JPG");
+    background: url("../content/REFERENCES/fgssnmfww.JPG");
     background-position: center; 
     background-size: contain;
     background-repeat: no-repeat;
@@ -713,6 +713,16 @@
 }
 
 @media (max-width:1600px){
+    .desc{
+        margin-top: 1.2rem;
+        height: 80%;
+    }
+    .image{
+        margin-top: 2.5rem;
+    }
+    .image_name{
+        margin-top: 13.7rem;
+    }
 }
 
 @media (max-width: 850px) and (orientation: landscape) { /* TODO */
@@ -772,6 +782,7 @@
         height: 360px;
         width: 300px;
         margin-bottom: 50px;
+        margin-top: 0px;
         padding-left: 0;
         padding-right: 0;
     }

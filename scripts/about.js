@@ -167,20 +167,16 @@ function showOverlay() {
         $('.header').css('visibility', 'hidden');
         menu.css('visibility', 'visible');
 
-        /* show overlay */
-        setTimeout(function() {
-            let overlay = $('#overlay');
-            overlay.css('z-index', '1');
-            overlay.css('visibility', 'visible');
-    
-            let overlay_menu_links = $('#overlay .menu_items a');
-            overlay_menu_links.css('transform', 'translateX(0)');
-            overlay_menu_links.css('opacity', '1');
-            for (let i = 0; i < overlay_menu_links.length; i++) {
-                delay = (i / 7 + 0.5) + 's';
-                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
-            }
-        }, 125);
+        overlay.css('z-index', '1');
+        overlay.css('visibility', 'visible');
+
+        let overlay_menu_links = $('#overlay .menu_items a');
+        overlay_menu_links.css('transform', 'translateX(0)');
+        overlay_menu_links.css('opacity', '1');
+        for (let i = 0; i < overlay_menu_links.length; i++) {
+            delay = (i / 7 + 0.5) + 's';
+            overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
+        }
 }
 
 function hideOverlay() {
@@ -198,6 +194,12 @@ function hideOverlay() {
     for (let i = 0; i < lines.length; i++) {
         lines.eq(i).css('transition-delay', i * 0.125 + 's');
         lines.eq(i).css('transform', 'translate(0, 0)');
+    }
+
+    let overlay_menu_links =$('#overlay .menu_items a');
+    
+    for (let i = 0; i < overlay_menu_links.length; i++) {
+        overlay_menu_links[i].style.animation = "";
     }
 
     let arrow = $('.menu img');

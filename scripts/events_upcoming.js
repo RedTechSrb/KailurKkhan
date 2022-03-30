@@ -210,20 +210,17 @@ function showOverlay() {
         // removeAnimations(scroll_gesture[0]);
         // scroll_gesture[0].classList.add("slide-gesture-out-overlay");    
 
-        /* show overlay */
-        setTimeout(function() {
-            let overlay = $('#overlay');
-            overlay.css('z-index', '1');
-            overlay.css('visibility', 'visible');
-    
-            let overlay_menu_links = $('#overlay .menu_items a');
-            overlay_menu_links.css('transform', 'translateX(0)');
-            overlay_menu_links.css('opacity', '1');
-            for (let i = 0; i < overlay_menu_links.length; i++) {
-                delay = (i / 7 + 0.5) + 's';
-                overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
-            }
-        }, 125);
+        let overlay = $('#overlay');
+        overlay.css('z-index', '1');
+        overlay.css('visibility', 'visible');
+
+        let overlay_menu_links = $('#overlay .menu_items a');
+        overlay_menu_links.css('transform', 'translateX(0)');
+        overlay_menu_links.css('opacity', '1');
+        for (let i = 0; i < overlay_menu_links.length; i++) {
+            delay = (i / 7 + 0.5) + 's';
+            overlay_menu_links[i].style.animation = "slide-in-overlay-items 0.25s ease-out";
+        }
     
         fullpage_api.setAllowScrolling(false, 'down');
         fullpage_api.setAllowScrolling(false, 'up');
