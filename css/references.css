@@ -143,7 +143,11 @@
     -webkit-filter: blur(6px) brightness(60%);
 }
 
-
+.reference20 .bg{
+    background-image: url("../content/REFERENCES/nedim_background.jpg");
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
+}
 /* .v_top{
     position: absolute;
     top: 0;
@@ -395,6 +399,14 @@
 
 .reference18 .image{
     background: url("../content/REFERENCES/DJArchitect.png");
+    background-position: center; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+}
+
+.reference20 .image{
+    background: url("../content/REFERENCES/nedim.JPG");
     background-position: center; 
     background-size: contain;
     background-repeat: no-repeat;

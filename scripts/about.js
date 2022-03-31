@@ -161,6 +161,7 @@ function showOverlay() {
         logo.css('visibility', 'hidden');
 
         // show overlay
+
         let overlay = $('#overlay');
         overlay.css('transform', 'translateX(0)');
 
@@ -207,6 +208,7 @@ function hideOverlay() {
 
 
     // hide overlay
+
     let overlay = $('#overlay');
     overlay.css('transform', 'translateX(-100vw)');
 
