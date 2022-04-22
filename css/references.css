@@ -148,6 +148,12 @@
     filter: blur(6px) brightness(60%);
     -webkit-filter: blur(6px) brightness(60%);
 }
+
+.reference21 .bg{
+    background-image: url("../content/REFERENCES/rasta1_background.png");
+    filter: blur(6px) brightness(60%);
+    -webkit-filter: blur(6px) brightness(60%);
+}
 /* .v_top{
     position: absolute;
     top: 0;
@@ -407,6 +413,14 @@
 
 .reference20 .image{
     background: url("../content/REFERENCES/nedim.JPG");
+    background-position: center; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+}
+
+.reference21 .image{
+    background: url("../content/REFERENCES/rasta1.png");
     background-position: center; 
     background-size: contain;
     background-repeat: no-repeat;
@@ -766,19 +780,13 @@
 
     .content{
         width: 77%;
-        min-height: 80vh;
-        height: 80vh;
-        top: 60px;
+        min-height: 90vh;
+        height: 90vh;
+        top: 65px;
         position: absolute;
-        bottom: 3%;
-        /* margin-left: 5%; */
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         left: 0%;    
     } 
 
@@ -791,16 +799,15 @@
     }
 
     .image{
-        height: 360px;
+        height: 340px;
         width: 300px;
-        margin-bottom: 50px;
         margin-top: 0px;
         padding-left: 0;
         padding-right: 0;
     }
 
     .image_name{
-        margin-top: 40px;
+        margin-top: 5px;
         font-size: 16px;
         left: 0;
     }
@@ -822,14 +829,13 @@
     }
 
     .desc{
-        width: 100%;
+        width: 120%;
         height: 50%;
         -webkit-box-pack: space-evenly;
             -ms-flex-pack: space-evenly;
                 justify-content: space-evenly;
         height: unset;
-        
-        /* margin-top: 30px; */
+        margin-top: 40px;
     }
 
     .heading{

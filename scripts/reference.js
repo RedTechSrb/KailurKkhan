@@ -25,7 +25,7 @@ $(function () {
 var loadedCount = 0;
 var displayed = false;
 var can_display = false;
-const TO_LOAD_COUNT = 18;
+const TO_LOAD_COUNT = 21;
 const SCROLL_SPEED_SECONDS = 1;
 const IMAGE_HOVER_SECONDS = 0.25;
 
@@ -121,6 +121,11 @@ function loadImages() {
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
         });
         $('<img/>').attr('src', '../content/REFERENCES/tropical.PNG').on('load', function() {
+            $(this).remove();
+            loadedCount++;
+            if (loadedCount == TO_LOAD_COUNT) can_display = true;
+        });
+        $('<img/>').attr('src', '../content/REFERENCES/rasta1.png').on('load', function() {
             $(this).remove();
             loadedCount++;
             if (loadedCount == TO_LOAD_COUNT) can_display = true;
