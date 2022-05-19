@@ -93,6 +93,11 @@ body{
     display: none;
 }
 
+.loading_logo{
+    background-position: 50% 0%;
+    width: 70%;
+}
+
 .number{
     color: white;
     font-size: 1.75rem;
@@ -584,6 +589,11 @@ body{
     .mobileice_room{
         display: block;
     }
+    .loading_logo{
+        width: 40%;
+        background-position: 50% 0%;
+        padding: 25%;
+    }
 }   
 
 @media (max-width: 425px) {
@@ -667,6 +677,12 @@ body{
         font-size: 0.6875em;
         font-weight: 300;
     }
+
+    .loading_logo{
+        width: 40%;
+        background-position: 50% 0%;
+        padding: 25%;
+    }
     
 }
 
@@ -688,11 +704,21 @@ body{
     .main_btn{
         margin-top: 15px;
     }
+    .loading_logo{
+        width: 40%;
+        background-position: 50% 0%;
+        padding: 25%;
+    }
 }
 
 @media (max-width: 425px) and (max-height: 550px) {
     .main{
         top: -10%;
+    }
+    .loading_logo{
+        width: 40%;
+        background-position: 50% 0%;
+        padding: 25%;
     }
 }
 
@@ -700,12 +726,22 @@ body{
     .main{
         top: -5%;
     }
+    .loading_logo{
+        width: 40%;
+        background-position: 50% 0%;
+        padding: 25%;
+    }
 }
 
 @media (max-width: 425px) and (min-height: 600px) {
     .main{
         top: 17%;
         left: 0.5%;
+    }
+    .loading_logo{
+        width: 40%;
+        background-position: 50% 0%;
+        padding: 25%;
     }
 }
 
@@ -716,5 +752,10 @@ body{
 
     .heading h1{
         font-size: 2.25em;
+    }
+    .loading_logo{
+        width: 40%;
+        background-position: 50% 0%;
+        padding: 25%;
     }
 }

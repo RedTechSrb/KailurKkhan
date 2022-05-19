@@ -303,6 +303,10 @@ body{
     visibility: hidden;
 }
 
+.load{
+    justify-content: center;
+}
+
 .menu_items{
     display: -webkit-box;
     display: -ms-flexbox;

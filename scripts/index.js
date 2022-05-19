@@ -7,7 +7,7 @@ $(function () {
             $('.load_bar').eq(0).css("width", "75%");
         }
         else{
-            $('.load_bar').eq(0).css("width", "100%");
+            $('.load_bar').eq(0).css("width", "110%");
         }
         setTimeout(function() {
             if (can_display) displaySite();

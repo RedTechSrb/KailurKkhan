@@ -38,15 +38,24 @@
 }
 
 .event1 .bg{
-    background-image: url("../content/images/2Bona (As Seen On).png");
+    background-image: url("../content/images/RASTA.JPG");
     filter: blur(14px) brightness(60%);
     -webkit-filter: blur(14px) brightness(60%);
 }
 
 .event2 .bg{
+    background-image: url("../content/images/2Bona (As Seen On).png");
+    filter: blur(14px) brightness(60%);
+    -webkit-filter: blur(14px) brightness(60%);
+}
+.event3 .bg{
+    background-image: url("../content/images/DJEXON_AsSeenOn.JPG");
+    filter: blur(14px) brightness(60%);
+    -webkit-filter: blur(14px) brightness(60%);
+}
+
+.event4 .bg{
     background-image: url("../content/images/MICMC(As Seen On).png");
-    /* filter: blur(1px) brightness(80%);
-    -webkit-filter: blur(1px) brightness(80%); */
     filter: blur(14px) brightness(60%);
     -webkit-filter: blur(14px) brightness(60%);
 }
@@ -159,21 +168,38 @@
 }
 
 .event1 .image{
-    background: url("../content/images/2Bona (As Seen On).png");
+    background: url("../content/images/RASTA.JPG");
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0%;
-    height: 600px;
+    height: 200px;
     width: 600px;
 }
 
 .event2 .image{
-    background: url("../content/images/MICMC(As Seen On).png");
+    background: url("../content/images/2Bona (As Seen On).png");
     background-position: 65% 0%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 200px;
+    width: 600px;
+}
+.event3 .image{
+    background: url("../content/images/DJEXON_AsSeenOn.JPG");
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 600px;
+}
+
+.event4 .image{
+    background: url("../content/images/MICMC(As Seen On).png");
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
     width: 600px;
 }
 
@@ -239,7 +265,7 @@
 }
 
 .text{
-    width: 400px;
+    width: 500px;
     margin-bottom: 15px;
 }
 
@@ -563,10 +589,10 @@
 
     .content{
         width: 77%;
-        min-height: 80vh;
+        min-height: 85vh;
         height: 80vh;
         top: 50px;
-        position: absolute;
+        /* position: absolute;
         bottom: 3%;
         margin-left: 5%;
         -webkit-box-pack: end;
@@ -574,7 +600,14 @@
                 justify-content: flex-end;
         -webkit-box-align: start;
             -ms-flex-align: start;
-                align-items: flex-start;
+                align-items: flex-start; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: start;
+        align-items: start;
+        align-content: space-between;
+        min-height: 85vh;
     }
 
     .mobile_heading{
